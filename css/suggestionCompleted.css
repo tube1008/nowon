@@ -1,0 +1,63 @@
+/* 슬로건 */
+.suggestion .slogan {
+    display: flex; justify-content: center;
+    padding-bottom: 50px;
+}
+.suggestion .slogan img {
+    width: 37%;
+}
+/* 신청하기 절차 */
+.suggestion .process_box ul {
+	width: 100%;
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.suggestion .process_box ul li {
+    font-weight: 700;
+    position: relative; text-align: center;
+}
+.suggestion .on {
+    color:#3F77E5;
+}
+.suggestion .line {
+    width: 30%;
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid;
+}
+.suggestion .process_box ul .num {
+    padding-top: 30px;
+    font-weight: 700;
+}
+/* 신청완료 박스 */
+.suggestion .completed_box {
+    display: flex; flex-flow: column nowrap;
+}
+.suggestion .txt_box {
+    width: 90%; margin: 0 auto;
+    margin-top: 50px;
+    border: 2px solid #3F77E5;
+    border-radius: 15px;
+    padding: 140px;
+    display: flex; flex-flow: column nowrap;
+    text-align: center;
+}
+.suggestion .completed_box .txt_box .join_completed {
+    font-size: 2.4rem;
+    font-weight: 700;
+    padding-bottom: 60px;
+}
+.suggestion .completed_box .txt_box .info {
+    font-size: 1.8rem;
+}
+.suggestion .completed_box .to_list {
+    margin: 0 auto;
+    font-size: 2.0rem; font-weight: 500;
+    color: #fff;
+    background: #3F77E5;
+    padding: 15px 88px;
+    border-radius: 10px;
+    margin-top: 50px;
+}

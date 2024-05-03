@@ -1,0 +1,104 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@font-face {
+    font-family: 'SCoreDream';
+    font-weight: 500; 
+    font-style: normal; 
+    src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream5.woff2) format('woff2'),
+         url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream5.woff) format('woff');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'SCoreDream';
+    font-weight: 600; 
+    font-style: normal; 
+    src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream6.woff2) format('woff2'),
+         url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream6.woff) format('woff');
+    font-display: swap;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; } 
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; /*vertical-align: baseline;*/ }
+html, body { width: 100%; height: 100%;font-family: 'Noto Sans KR', sans-serif; letter-spacing: -0.4px !important; position: relative; margin: 0 auto;line-height: 1.5 ! important; cursor: default;color: #212529;font-weight: 400;}
+
+html{
+	-webkit-text-size-adjust : none;  
+	-ms-text-size-adjust : none;  
+	-moz-text-size-adjust : none;  
+	-o-text-size-adjust : none; 
+}
+body { line-height: 1; 
+    	min-width: 360px;
+}
+
+* { -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after { content: ""; content: none; }
+
+table { border-collapse: collapse; border-spacing: 0; /*table-layout: fixed;*/ width: 100%; }
+
+a { color: #212529; text-decoration: none; }
+a:focus{outline: none;}
+a:focus-visible {outline: 2px dashed red;}
+a:hover, a:active { text-decoration: none; /* color: initial; */}
+
+input[type="text"], input[type="password"] { border: none; outline: none; font-family: 'Noto Sans KR', sans-serif;}
+input[type="text"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder { font-size: 15px; letter-spacing: -0.35px; text-align: left; color: #666; }
+input[type="text"]:-ms-input-placeholder, input[type="password"]:-ms-input-placeholder { font-size: 15px; letter-spacing: -0.35px; text-align: left; color: #666; }
+input[type="text"]::-ms-input-placeholder, input[type="password"]::-ms-input-placeholder { font-size: 15px; letter-spacing: -0.35px; text-align: left; color: #666; }
+input[type="text"]::placeholder, input[type="password"]::placeholder { font-size: 15px; letter-spacing: -0.35px; text-align: left; color: #666; }
+input[type="radio"]{ position: relative;top:1px}
+
+/* input file 초기화 */
+input[type="file"] {  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip:rect(0,0,0,0); border: 0; }
+button { background-color: transparent; border: none; padding: 0; cursor: pointer; font-family: 'Noto Sans KR', sans-serif;}
+button:focus-visible {outline: 2px dashed red;}
+
+/* Select box 스타일 초기화 */
+select { cursor: pointer; -webkit-appearance: none; -moz-appearance: none; appearance: none; border: none;padding: 5px 0;
+	/*background:url(../images/common/btn-owndb-down.png) 90% no-repeat;*/ }
+select { cursor: pointer;padding: 9px 20px; padding-right: 35px;font-size: 15px; letter-spacing: -0.35px;text-align: left; color: rgba(40, 42, 63, 0.83);border-radius: 4px;background-color: #ffffff;background-size: 15px;}
+input{font-family: 'Noto Sans KR', sans-serif ! important;}
+
+/* IE 에서 Select box 화살표 제거 */
+select::-ms-expand { display: none; }
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active { -webkit-box-shadow: 0 0 0 30px #f0f0f0 inset !important; }
+
+.clear::before, .clear::after {display: block; content:''; clear:both;}
+
+:root{
+	--color-main: #0146E5;
+	--color-main2: #2970DB;
+	--color-main3: #3F77E5;
+
+	--color-black: #212529;
+	--color-white: #f8f8f8;
+	--color-gray: #cccccc;
+}
+.title{
+	font-family: 'SCoreDream';
+	font-weight: 600;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
+@media screen and (max-width: 1024px) {
+	html {
+	  font-size: 59%;
+	}
+}
+@media screen and (max-width: 768px) {
+	html {
+	  font-size: 57%;
+	}
+}

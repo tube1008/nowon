@@ -1,0 +1,52 @@
+/* 슬로건 */
+.suggestion .slogan {
+    display: flex; flex-flow: row nowrap;
+    align-items: center; justify-content: space-between;
+    padding:0 40px 50px 40px;
+}
+.suggestion .slogan img {
+    width: 440px;
+}
+.suggestion .slogan .to_suggest {
+    width: 17%;
+    font-size: 2.0rem;
+    font-weight: 500;
+    color: #fff;
+    padding: 10px 0;
+    background: #3F77E5;
+    border-radius: 10px;
+    text-align: center;
+}
+/* 신청하기 절차 */
+.suggestion .process_box ul {
+	width: 100%;
+    display: flex; flex-flow: row nowrap;
+    align-items: center; justify-content: space-between;
+}
+.suggestion .process_box ul li {
+    font-weight: 700;
+    position: relative; text-align: center;
+}
+.suggestion .process_box ul li .stage_path {
+    display: flex; align-items: center;
+}
+.suggestion .step1 {
+	color:#3F77E5;
+}
+.suggestion .step2 {
+	display: block;
+    width: 391px;
+    height: 2px; 
+    background: #3F77E5;
+    margin-right: 5px;
+}
+.suggestion .process_box ul li .stage_path .path {
+    display: block;
+    width: 391px;
+    height: 2px; 
+    background: #666;
+    margin-right: 5px;
+}
+.suggestion .process_box ul li .stage_path .num {
+    padding-left: 5px;
+}

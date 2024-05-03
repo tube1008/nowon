@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bizRequestForm.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/user/js/main.js"></script>
+
+    <title>신청하기 | 노원청년포탈</title>
+</head>
+
+<script src="<c:url value='/Bootstrap/js/bootstrap.min.js'/>" rel="stylesheet"></script>
+
+<script>
+    $(function () {
+            //직접입력 인풋박스 기존에는 숨어있다가
+            $("#selboxDirect").hide();
+            $("#selbox").change(function () {
+                //직접입력을 누를 때 나타남
+                if ($("#selbox").val() == "direct") {
+                    $("#selboxDirect").show();
+                } else {
+                    $("#selboxDirect").hide();
+                }
+            })
+        });​
+</script>
+
+<body>
+    <div id="skip_nav">
+        <a href="#main"><span>본문 바로가기</span></a>
+        <a href="#header"><span>주메뉴 바로가기</span></a>
+        <a href="#footer"><span>푸터 바로가기</span></a>
+    </div>
+    <div id="wrap">
+        <!-- ========== HEADER ========== -->
+        <jsp:include page="/user/mnu/headerMenu.do"></jsp:include>
+        <!-- ========== END HEADER ========== -->
+
+        <!-- ========== MAIN CONTENT ========== -->
+        <main id="main">
+            <section class="board" id="content-area">
+                <div class="title_box">
+                    <div class="path">
+                        <ul>
+                            <li class="path_item">
+                                <img src="/user/images/ico-home.png" alt="Home">
+                            </li>
+                            <li class="path_item">신통방통 청년도우미</li>
+                            <li class="path_item">정책캘린더</li>
+                            <li class="path_item">신청하기</li>
+                        </ul>
+                    </div>
+                    <h2>사업신청하기</h2>
+                </div>
+                <div class="policy_title">
+                    <span>취업정보</span>
+                    <h2>2024년 노원구 일자리 박람회</h2>
+                </div>
+                <div class="process_box">
+                    <ul>
+                        <li class="step1">
+                            <span>개인정보 수집 및 이용 & 이용약관에 동의</span>
+                            <div class="stage_path">
+                                <span class="step2"></span>
+                                <span class="num">01</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span>정보 입력</span>
+                            <div class="stage_path">
+                                <span class="path"></span>
+                                <span class="num">02</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span>신청 완료</span>
+                            <div class="stage_path">
+                                <span class="path"></span>
+                                <span class="num">03</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="information">
+                    <form action="#" method="post" class="user_info">
+                        <fieldset>
+                            <legend class="hide">신청양식</legend>
+                            <span class="essential"><em>*</em>필수항목이므로 반드시 입력해 주시기 바랍니다.</span>
+                            <div class="user_name">
+                                <span class="name_title">신청자<em>*</em></span>
+                                <input type="text" class="name">
+                            </div>
+                            <div class="user_age">
+                                <span class="title_age">연 령<em>*</em></span>
+                                <input type="text" class="age" maxlength="2">
+                                <span class="txt_age">세</span>
+                            </div>
+                            <div class="user_gender">
+                                <span class="title_gender">성 별<em>*</em></span>
+                                <input type="radio" name="male" id="male">
+                                <label for="male">남자</label>
+                                <input type="radio" name="female" id="female">
+                                <label for="female">여자</label>
+                            </div>
+                            <div class="user_birth">
+                                <span class="title_birth">생년월일<em>*</em></span>
+                                <input type="date" name="bday" class="birth">
+                            </div>
+                            <div class="user_tel">
+                                <span class="title_tel">연락처<em>*</em></span>
+                                <div class="tel">
+                                    <input type="tel" class="num num1" maxlength="3">
+                                    <span class="hyphen">-</span>
+                                    <input type="tel" class="num num2" maxlength="4">
+                                    <span class="hyphen">-</span>
+                                    <input type="tel" class="num num3" maxlength="4">
+                                </div>
+                            </div>
+                            <div class="user_email">
+                                <span class="title_mail">e-mail<em>*</em></span>
+                                <div class="mail_box">
+                                    <input type="email" class="domain_txt">
+                                    <span class="txt">@</span>
+                                    <input type="text" id="textEmail" name="textEmail"/>
+                                    <select name="mail_address" id="domain_list">
+                                        <option value="blank" disabled selected>선택하세요</option>
+                                        <option value="type" id="textEmail">직접입력</option>
+                                        <option value="naver.com">naver.com</option>
+                                        <option value="google.com">google.com</option>
+                                        <option value="daum.com">daum.com</option>
+                                        <option value="nate.com">nate.com</option>
+                                        <option value="hanmail.net">hanmail.net</option>
+                                    </select>
+                                    <button type="button" class="mail_chk">중복확인</button>
+                                </div>
+                            </div>
+                            <div class="user_address">
+                                <div class="address_box">
+                                    <div class="post_address">
+                                        <span class="address_title">주 소<em>*</em></span>
+                                        <input type="text" class="postcode" placeholder="우편번호">
+                                        <input type="button" class="address_btn" value="우편번호">
+                                    </div>
+                                    <div class="detail_address">
+                                        <input type="text" class="road_address" placeholder="도로명주소">
+                                        <input type="text" class="detail" placeholder="상세주소">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="file_upload">
+                                <span>파 일<em>*</em></span>
+                                <input type="text" class="upload_name" disabled="disabled">
+                                <label for="ex_filename">파일업로드</label>
+                                <input type="file" id="ex_filename" class="upload_hidden">
+                            </div>
+                            <div class="txt_box">
+                                <textarea name="txt_box" class="txt" cols="30" rows="10"
+                                    placeholder="신청내용을 입력해주세요."></textarea>
+                            </div>
+                            <div class="save">
+                                <a href="/user/uss/ion/biz/BizRequestCompleted.do" class="save_contents">저장</a>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <!-- ========== END MAIN CONTENT ========== -->
+
+        <!-- ========== FOOTER ========== -->
+
+        <!-- ========== END FOOTER ========== -->
+    </div>
+</body>
+
+</html>

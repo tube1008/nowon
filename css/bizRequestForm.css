@@ -1,0 +1,308 @@
+/* 제목 */
+.policy_title {
+    width: 100%;
+    background: rgba(222, 222, 222, 30%);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+.policy_title span {
+    font-size: 1.25rem;
+}
+.policy_title h2 {
+    font-size: 1.875rem;
+}
+/* 신청하기 절차 */
+.bizRequest .process_box ul {
+    display: flex; flex-flow: row nowrap;
+    align-items: center; 
+}
+.bizRequest .process_box ul li {
+    font-weight: 700;
+    position: relative; text-align: center;
+}
+.bizRequest .process_box ul li .stage_path {
+    display: flex; align-items: center;
+}
+.bizRequest .step1 {
+	color:#3F77E5;
+}
+.bizRequest .step2 {
+	display: block;
+    width: 391px;
+    height: 2px; 
+    background: #3F77E5;
+    margin-right: 5px;
+    flex-grow: 1;
+}
+.bizRequest .process_box ul li .stage_path .path {
+	display: block;
+    width: 391px;
+    height: 2px; 
+    background: #666;
+    margin-right: 5px;
+    flex-grow: 1;
+}
+
+.bizRequest .process_box ul li .stage_path .num {
+    padding-left: 5px;
+}
+/* 신청란 입력 */
+.information {
+    max-width: 980px; margin: 0 auto;
+    padding-top: 50px;
+}
+.essential {
+    display: flex; justify-content: right;
+    align-items: center;
+    font-size: 0.938rem;
+}
+.essential em {font-size: 1.5rem; padding-right: 5px;}
+em {
+    color: #FF8A00; padding-left: 10px;
+}
+/* 신청자 */
+.user_name {
+    display: flex; align-items: center;
+    padding-bottom: 30px;
+}
+.user_name span {
+    width: 100px;
+    font-size: 1.25rem; font-weight: 700;
+}
+.user_name .name {
+    width: 90%; 
+    background: #eee;
+    padding: 15px;
+    font-size: 1.125rem;
+}
+/* 연령 */
+.user_age {
+    display: flex; align-items: center;
+    padding-bottom: 30px;
+}
+.user_age .title_age {
+    width: 100px;
+    font-size: 1.25rem; font-weight: 700;
+}
+.user_age .age {
+    width: 10%;
+    background: #eee;
+    padding: 15px;
+    font-size: 1.125rem;
+    text-align: center;
+}
+.txt_age {
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding-left: 10px;
+}
+/* 성별 */
+.user_gender {
+    display: flex; align-items: center;
+    padding-bottom: 30px;
+}
+.title_gender {
+    width: 100px;
+    font-size: 1.25rem; font-weight: 700;
+}
+.user_gender label {
+    font-size: 1.25rem; font-weight: 700;
+    padding-left: 10px; 
+}
+#female {margin-left: 20px;}
+/* 생년월일 */
+.user_birth {
+    display: flex; align-items: center;
+    padding-bottom: 30px;
+}
+.title_birth {
+    width: 100px;
+    font-size: 1.25rem; font-weight: 700;
+}
+.birth {
+    width: 270px;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.125rem;
+    background: #eee; border: none;
+}
+/* 연락처 */
+.user_tel {
+    display: flex; align-items: center;
+    padding-bottom: 30px;
+}
+.title_tel {
+    width: 100px;
+    font-size: 1.25rem; font-weight: 700;
+}
+.tel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tel .num {
+    width: 270px; height: 50px;
+    background: #eee;
+    border: none;
+    font-size: 1.125rem;
+    text-align: center;
+}
+.hyphen {
+    font-weight: 700;
+    padding: 0 15px;
+}
+/* 이메일 */
+#textEmail {display: none;}
+.user_email {
+    display: flex; align-items: center;
+    padding-bottom: 30px;
+}
+.title_mail {
+    width: 100px;
+    font-size: 1.25rem; font-weight: 700;
+}
+.mail_box {
+    display: flex; justify-content: space-between;
+    align-items: center;
+}
+.domain_txt {
+    width: 270px; height: 50px;
+    background: #eee;
+    border: none;
+    font-size: 1.125rem;
+    text-align: center;
+}
+.user_email .txt {
+    font-weight: 700;
+    padding: 0 15px;
+}
+.domain_list {
+    width: 270px; height: 50px;
+    background: #eee;
+    border: none;
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+.domain_list option {
+    font-size: 1.25rem;
+    text-align: center;
+}
+.mail_chk {
+    width: 270px; height: 50px;
+    background: #555;
+    font-size: 1.125rem; font-weight: 400;
+    color: #fff;
+    border: none; border-radius: 10px;
+    margin-left: 25px;
+}
+/* 주소 */
+.user_address {
+    display: flex; align-items: center;
+    padding-bottom: 30px;
+}
+.address_title {
+    width: 100px;
+    font-size: 1.25rem; font-weight: 700;
+}
+.address_box {
+    display: flex; flex-flow: column nowrap;
+}
+.post_address {
+    display: flex; flex-flow: row nowrap;
+    align-items: center;
+    padding-bottom: 30px;
+}
+.post_address .postcode {
+    width: 270px; height: 50px;
+    background: #eee;
+    border: none;
+    font-size: 1.125rem;
+    text-align: center;
+}
+.post_address .postcode::placeholder {
+    font-size: 1.125rem;
+    text-align: center;
+}
+.address_btn {
+    width: 250px; height: 50px;
+    font-size: 1.125rem; font-weight: 400;
+    color: #fff;
+    background: #3F77E5;
+    border-radius: 10px; border: none;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.detail_address {
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+    padding-left: 100px;
+}
+.detail_address .detail::placeholder {
+    font-size: 1.125rem;
+    text-align: center;
+}
+.detail_address .road_address {
+    width: 580px; height: 50px;
+    background: #eee;
+    font-size: 1.125rem;
+    text-align: center;
+}
+.detail_address .road_address::placeholder {
+    font-size: 1.125rem;
+    text-align: center;
+}
+.detail_address .detail {
+    width: 270px; height: 50px;
+    background: #eee;
+    margin-left: 30px;
+    font-size: 1.125rem;
+    text-align: center;
+}
+/* 파일 업로드 */
+.file_upload {
+    display: flex; align-items: center;
+    padding-bottom: 30px;
+}
+.file_upload span {
+    width: 100px;
+    font-size: 1.25rem; font-weight: 700;
+}
+.file_upload .upload_name {
+    width: 590px; height: 50px;
+    background: #eee;
+    font-size: 1.125rem;
+    text-align: center;
+}
+.file_upload label {
+    width: 270px;
+    font-size: 1.125rem; color: #fff;
+    background: #3F77E5;
+    padding: 10px 79px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.txt_box {
+    text-align: center;
+}
+.txt_box .txt {
+    width: 980px; height: 250px;
+    border: 2px solid #333;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 1.125rem;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.txt_box .txt::placeholder {
+    font-size: 1.25rem;
+}
+.txt_box .save_contents {
+    font-size: 1.125rem; font-weight: 500;
+    color: #fff;
+    background: #3F77E5;
+    padding: 15px 106px;
+    border-radius: 10px;
+    margin-top: 50px;
+}

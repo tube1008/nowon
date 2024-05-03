@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/user/js/main.js"></script>
+
+    <title>청년정책제언 | 노원청년포탈</title>
+</head>
+
+<body>
+    <div id="skip_nav">
+        <a href="#main"><span>본문 바로가기</span></a>
+        <a href="#header"><span>주메뉴 바로가기</span></a>
+        <a href="#footer"><span>푸터 바로가기</span></a>
+    </div>
+    <div id="wrap">
+        <!-- ========== HEADER ========== -->
+        <jsp:include page="/user/mnu/headerMenu.do"></jsp:include>
+        <!-- ========== END HEADER ========== -->
+
+        <!-- ========== MAIN CONTENT ========== -->
+        <main id="main">
+            <section class="board suggestion" id="content-area">
+                <div class="title_box">
+                    <div class="path">
+                        <ul>
+                            <li class="path_item">
+                                <img src="/user/images/ico-home.png" alt="Home">
+                            </li>
+                            <li class="path_item">와글와글 청년목소리</li>
+                            <li class="path_item">청년정책제언</li>
+                        </ul>
+                    </div>
+                    <h2>청년정책제언</h2>
+                </div>
+                <div class="tab_list">
+                    <ul class="tab_type2">
+                        <li class="on">
+                            <a href="#">청년정책제언</a>
+                        </li>
+                        <li>
+                            <a href="#">청년토론</a>
+                        </li>
+                        <li>
+                            <a href="#">청년참여공간대여</a>
+                        </li>
+                        <li>
+                            <a href="#">우리의관심사</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="slogan">
+                    <div>
+                        <img src="./images/slogan.png" alt="슬로건">
+                    </div>
+                    <a href="./suggestionTerms.html" class="to_suggest">제안하기</a>
+                </div>
+                <table class="table notice_tb">
+                    <caption class="hide">공지사항 표</caption>
+                    <colgroup>
+                        <col style="width: 8%">
+                        <col style="width: auto">
+                        <col style="width: 12%">
+                        <col style="width: 12%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">번호</th>
+                            <th scope="col" class="tit">제목</th>
+                            <th scope="col">진행사항</th>
+                            <th scope="col">반영결과</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>61</td>
+                            <td>청년1인가구 청소(정리, 수납 서비스)</td>
+                            <td>접수</td>
+                            <td>기추진</td>
+                        </tr>
+                        <tr>
+                            <td>60</td>
+                            <td>기존 고용노동부 내일채움공제 폐지 대체안</td>
+                            <td>접수</td>
+                            <td>기추진</td>
+                        </tr>
+                        <tr>
+                            <td>59</td>
+                            <td>서울 서복권 청년 종합 센터 구축</td>
+                            <td>접수</td>
+                            <td>기추진</td>
+                        </tr>
+                        <tr>
+                            <td>58</td>
+                            <td>게시글</td>
+                            <td>접수</td>
+                            <td>기추진</td>
+                        </tr>
+                        <tr>
+                            <td>57</td>
+                            <td>게시글</td>
+                            <td>접수</td>
+                            <td>기추진</td>
+                        </tr>
+                        <tr>
+                            <td>56</td>
+                            <td>게시글</td>
+                            <td>접수</td>
+                            <td>기추진</td>
+                        </tr>
+                        <tr>
+                            <td>55</td>
+                            <td>게시글</td>
+                            <td>접수</td>
+                            <td>기추진</td>
+                        </tr>
+                        <tr>
+                            <td>54</td>
+                            <td>게시글</td>
+                            <td>접수</td>
+                            <td>기추진</td>
+                        </tr>
+                        <tr>
+                            <td>53</td>
+                            <td>게시글</td>
+                            <td>접수</td>
+                            <td>기추진</td>
+                        </tr>
+                        <tr>
+                            <td>52</td>
+                            <td>게시글</td>
+                            <td>접수</td>
+                            <td>기추진</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="card-footer">
+                    <div class="paging" id="paging_div">
+                        <ul class="pagination justify-content-center">
+                            <ui:pagination paginationInfo="${paginationInfo}" type="renew"
+                                jsFunction="fn_egov_select_noticeList" />
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- ========== END MAIN CONTENT ========== -->
+
+        <!-- ========== FOOTER ========== -->
+
+        <!-- ========== END FOOTER ========== -->
+    </div>
+</body>
+
+</html>

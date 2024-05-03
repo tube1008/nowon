@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bizRequest.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/user/js/main.js"></script>
+
+    <title>신청하기 | 노원청년포탈</title>
+</head>
+
+<body>
+    <div id="skip_nav">
+        <a href="#main"><span>본문 바로가기</span></a>
+        <a href="#header"><span>주메뉴 바로가기</span></a>
+        <a href="#footer"><span>푸터 바로가기</span></a>
+    </div>
+    <div id="wrap">
+        <!-- ========== HEADER ========== -->
+        <jsp:include page="/user/mnu/headerMenu.do"></jsp:include>
+        <!-- ========== END HEADER ========== -->
+
+        <!-- ========== MAIN CONTENT ========== -->
+        <main id="main">
+            <section class="board" id="content-area">
+                <div class="title_box">
+                    <div class="path">
+                        <ul>
+                            <li class="path_item">
+                                <img src="/user/images/ico-home.png" alt="Home">
+                            </li>
+                            <li class="path_item">신통방통 청년도우미</li>
+                            <li class="path_item">정책캘린더</li>
+                            <li class="path_item">신청하기</li>
+                        </ul>
+                    </div>
+                    <h2>사업신청하기</h2>
+                </div>
+                <div class="policy_title employMent">
+                    <span>취업정보</span>
+                    <h2>2024년 노원구 일자리 박람회</h2>
+                </div>
+                <div class="process_box biz">
+                    <ul>
+                        <li>
+                            <span>개인정보 수집 및 이용 & 이용약관에 동의</ㄴ>
+                            <div class="stage_path">
+                                <span class="path"></span>
+                                <span class="num">01</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span>정보 입력</span>
+                            <div class="stage_path">
+                                <span class="path"></span>
+                                <span class="num">02</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span>신청 완료</span>
+                            <div class="stage_path">
+                                <span class="path"></span>
+                                <span class="num">03</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="rule_check rule">
+                    <form action="#" method="get" id="check_user">
+                        <fieldset>
+                            <legend class="hide">이용약관 및 취급 방침 동의양식</legend>
+                            <div class="terms">
+                                <h2>이용약관</h2>
+                                <div class="terms_box">
+                                    <div class="t_box">
+                                        <span class="txt1">제 1장 총칙</span>
+                                        <span class="txt2">제 1조(목적)</span>
+                                        <span class="txt_detail">
+                                            이 이용약관은 회원이 노원청년센터에서 제공하는 인터넷웹사이트 서비스(이하 "서비스")를 이용함에 있어 회원과 노원청년센터 간의권리,<br>
+                                            의무 및 책임사항, 이용조건 및 절차 등 기본적인 사항을 규정함을 목적으로 합니다.
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="chk_box">
+                                    <input type="checkbox" id="chk1">
+                                    <label for="chk1">동의합니다.</label>
+                                </div>
+                                <h2>개인정보취급방침</h2>
+                                <div class="terms_box">
+                                    <div class="t_box">
+                                        <span class="txt_detail">
+                                            노원청년센터는 노원청년센터 이용에 있어 [개인정보보호법]에 의거하여 개인정보 수집, 이용에 관한 동의를 받고 있으며, 아래 와 같은
+                                            목적으로<br>
+                                            개인정보를 수집하여 처리하고자 합니다.
+                                        </span>
+                                        <span class="txt1">1. 개인정보의 수집 및 이용 목적</span>
+                                        <span class="txt2">가. 개인정보 및 고유 식별정보 수집 항목</span>
+                                    </div>
+                                </div>
+                                <div class="chk_box">
+                                    <input type="checkbox" id="chk2">
+                                    <label for="chk2">동의합니다.</label>
+                                </div>
+                            </div>
+                            <div class="btn">
+                                <a href="/user/uss/ion/biz/BizRequestForm.do" class="next_page">다음 단계</a>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <!-- ========== END MAIN CONTENT ========== -->
+
+        <!-- ========== FOOTER ========== -->
+
+        <!-- ========== END FOOTER ========== -->
+    </div>
+</body>
+
+</html>

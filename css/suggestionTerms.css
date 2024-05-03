@@ -1,0 +1,110 @@
+/* 슬로건 */
+.suggestion .slogan {
+    display: flex; justify-content: center;
+    padding-bottom: 50px;
+}
+.suggestion .slogan img {
+    width: 37%;
+}
+/* 신청하기 절차 */
+.suggestion .process_box {width: 1280px;}
+.suggestion .policy_title {
+    width: 100%;
+    background: rgba(222, 222, 222, 30%);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+.suggestion .policy_title span {
+    font-size: 2.0rem;
+}
+.suggestion .policy_title h2 {
+    font-size: 3.0rem;
+}
+.suggestion .process_box ul {
+	width: 100%;
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.suggestion .process_box ul li {
+    font-weight: 700;
+    position: relative; text-align: center;
+}
+.suggestion .on {
+    color:#3F77E5;
+}
+.suggestion .line {
+    width: 30%;
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid;
+}
+.suggestion .process_box ul .num {
+    padding-top: 30px;
+    font-weight: 700;
+}
+/* 이용약관, 개인정보취급방침 */
+.suggestion .rule_check {
+    margin-top: 40px;
+}
+.suggestion .terms h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+.suggestion .terms_box {
+    height: 250px;
+    display: flex; flex-flow: column nowrap;
+    border: solid 2px #333;
+    border-radius: 15px;
+    padding: 50px 130px;
+}
+.suggestion .t_box {
+    overflow: auto;
+    padding: 20px;
+    display: flex; flex-flow: column nowrap;
+}
+.suggestion .terms .chk_box {
+    text-align: right;
+    padding-top: 10px;
+}
+.suggestion .t_box .txt1 {
+    padding-top: 30px;
+}
+.suggestion .t_box .txt2 {
+    padding: 40px 0; 
+}
+.suggestion .t_box .txt3 {
+	padding: 40px 0 30px 50px;
+}
+/* 스크롤바 커스텀 */
+.suggestion .t_box::-webkit-scrollbar {
+    width: 10px;
+}
+.suggestion .t_box::-webkit-scrollbar-track {
+    background: #fff;
+}
+.suggestion .t_box::-webkit-scrollbar-button {
+    display: none;
+}
+.suggestion .t_box::-webkit-scrollbar-thumb { 
+    background: #eee;
+}
+.suggestion .t_box::-webkit-scrollbar-track,
+.suggestion .t_box::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+}
+.suggestion .btn {
+	text-align: center;
+	margin-top: 40px
+}
+.suggestion .next_page {
+    font-size: 2.0rem;
+    font-weight: 700;
+    color: #fff;
+    background: #3F77E5;
+    padding: 17px 117px;
+    border-radius: 10px;
+}

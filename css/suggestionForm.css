@@ -1,0 +1,260 @@
+/* 슬로건 */
+.slogan {
+    display: flex; justify-content: center;
+    padding-bottom: 50px;
+}
+.slogan img {
+    width: 37%;
+}
+/* 신청하기 절차 */
+.suggestion .process_box {width: 1280px;}
+.suggestion .policy_title {
+    width: 100%;
+    background: rgba(222, 222, 222, 30%);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+.suggestion .policy_title span {
+    font-size: 2.0rem;
+}
+.suggestion .policy_title h2 {
+    font-size: 3.0rem;
+}
+.suggestion .process_box ul {
+	width: 100%;
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.suggestion .process_box ul li {
+    font-weight: 700;
+    position: relative; text-align: center;
+}
+.suggestion .on {
+    color:#3F77E5;
+}
+.suggestion .line {
+    width: 30%;
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid;
+}
+.suggestion .process_box ul .num {
+    padding-top: 30px;
+    font-weight: 700;
+}
+/* suggestionForm_신청하기 입력창 */
+/* 신청란 입력 */
+.suggestion .information {
+    max-width: 980px; margin: 0 auto;
+    padding-top: 50px;
+}
+.suggestion .essential {
+    text-align: right;
+    font-size: 1.5rem;
+}
+.suggestion .essential em {font-size: 1.5rem; padding-right: 5px;}
+em {
+    color: #FF8A00; padding-left: 10px;
+}
+/* 제안자 */
+.suggestion .user_name {
+	display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+}
+.suggestion .user_name .title_name {
+    width: 100px;
+    font-size: 2.0rem; font-weight: 700;
+}
+.suggestion .user_name .name {
+    width: 90%; height: 50px;
+    background: #eee;
+    padding: 15px;
+    font-size: 1.8rem;
+}
+/* 연락처 */
+.suggestion .user_tel {
+    display: flex; align-items: center;
+    padding-bottom: 30px;
+}
+.suggestion .title_tel {
+    width: 100px;
+    font-size: 2.0rem; font-weight: 700;
+}
+.suggestion .tel {
+	width: 90%;
+    display: flex; justify-content: space-between;
+    align-items: center;
+}
+.suggestion .tel .num1, 
+.suggestion .tel .num2, 
+.suggestion .tel .num3 {
+    width: 29%; height: 50px;
+    background: #eee;
+    border: none;
+    font-size: 1.8rem;
+    text-align: center;
+}
+.suggestion .hyphen {
+    font-weight: 700;
+    text-align: center;
+    padding : 0 15px;
+}
+/* 이메일 */
+.suggestion .user_email {
+    display: flex; align-items: center;
+    padding-bottom: 30px;
+}
+.suggestion .title_mail {
+    width: 100px;
+    font-size: 2.0rem; font-weight: 700;
+}
+.suggestion .mail_box {
+	width: 90%;
+    display: flex;
+    align-items: center;
+}
+.suggestion .domain_txt {
+    width: 29%; height: 50px;
+    background: #eee;
+    border: none;
+    font-size: 1.8rem;
+    text-align: center;
+}
+.suggestion .user_email .txt {
+    font-weight: 700;
+    padding: 0 15px;
+}
+.suggestion .domain_list {
+    width: 29%; height: 50px;
+    border: none;
+    border-radius: 0px;
+    font-size: 1.8rem;
+    font-weight: 400;
+    background: url(/user/images/ico-arrow-down.png) no-repeat 90% 50% #eee;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.suggestion .domain_list option {
+    font-size: 1.8rem;
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+/* 성별 */
+.suggestion .user_gender {
+    display: flex; align-items: center;
+    padding-bottom: 30px;
+}
+.suggestion .title_gender {
+    width: 100px;
+    font-size: 2.0rem;; font-weight: 700;
+}
+.suggestion .user_gender label {
+    font-size: 2.0rem; font-weight: 700;
+    padding-left: 10px; 
+}
+.suggestion #female {margin-left: 20px;}
+/* 생년월일 */
+.suggestion .user_birth {
+    display: flex; align-items: center;
+    padding-bottom: 30px;
+}
+.suggestion .title_birth {
+    width: 100px;
+    font-size: 2.0rem; font-weight: 700;
+}
+.suggestion .birth {
+    width: 26%; height:50px;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.8rem; color:#666;
+    background: #eee; border: none;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+/* 주소 */
+.suggestion .user_address {
+    padding-bottom: 30px;
+}
+.suggestion .address_title {
+    width: 100px;
+    font-size: 2.0rem; font-weight: 700;
+}
+.suggestion .post_address {
+    display: flex; flex-flow: row nowrap;
+    align-items: center;
+    padding-bottom: 30px;
+}
+.suggestion .post_address .postcode {
+    width: 26%; height: 50px;
+    background: #eee;
+    border: none;
+    font-size: 1.8rem;
+    text-align: center;
+}
+.suggestion .post_address .postcode::placeholder {
+    font-size: 1.8rem;
+    text-align: center;
+}
+.suggestion .address_btn {
+    width: 26%; height: 50px;
+    font-size: 1.8rem; font-weight: 400;
+    color: #fff;
+    background: #3F77E5;
+    border-radius: 10px; border: none;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.suggestion .detail_address {
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+    padding-left: 100px;
+}
+.suggestion .detail_address .detail::placeholder {
+    font-size: 1.8rem;
+    text-align: center;
+}
+.suggestion .detail_address .road_address {
+    width: 50%; height: 50px;
+    background: #eee;
+    font-size: 1.8rem;
+    text-align: center;
+}
+.suggestion .detail_address .road_address::placeholder {
+    font-size: 1.8rem;
+    text-align: center;
+}
+.suggestion .detail_address .detail {
+    width: 50%; height: 50px;
+    background: #eee;
+    margin-left: 30px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+.suggestion .apply_box {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.suggestion .apply_box .apply_detail {
+    width: 100%; height: 250px;
+    border: 2px solid #333;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 1.8rem;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.suggestion .apply_box .apply_detail::placeholder {
+    font-size: 2.0rem;
+}
+.attention {
+    font-size: 1.5rem; text-align: right; 
+}
+.suggestion .save {text-align: center;}
+.suggestion .save .save_contents {
+    font-size: 1.8rem; font-weight: 500;
+    color: #fff;
+    background: #3F77E5;
+    padding: 15px 106px;
+    border-radius: 10px;
+}

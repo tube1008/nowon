@@ -1,0 +1,110 @@
+/* 제목 */
+.policy_title {
+    width: 100%;
+    background: rgba(222, 222, 222, 30%);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+.policy_title span {
+    font-size: 1.25rem;
+}
+.policy_title h2 {
+    font-size: 1.875rem;
+}
+/* 신청하기 절차 */
+.process_box ul {
+    display: flex; flex-flow: row nowrap;
+    align-items: center; justify-content: space-between;
+}
+.process_box ul li {
+    font-weight: 700;
+    position: relative; text-align: center;
+}
+.process_box ul li:nth-child(1) {
+    color: #3F77E5; 
+}
+.process_box ul li:nth-child(2), 
+.process_box ul li:nth-child(3) {
+    color: #666; 
+}
+.process_box ul li .stage_path {
+    display: flex; align-items: center;
+}
+.process_box ul li:nth-child(1) .stage_path .path {
+    display: block;
+    width: 391px;
+    height: 2px; 
+    background: #3F77E5;
+    margin-right: 5px;
+}
+.process_box ul li:nth-child(2) .stage_path .path,
+.process_box ul li:nth-child(3) .stage_path .path {
+    display: block;
+    width: 391px;
+    height: 2px; 
+    background: #666;
+    margin-right: 5px;
+}
+.process_box ul li .stage_path .num {
+    padding-left: 5px;
+}
+/* 이용약관, 개인정보취급방침 */
+.rule_check {
+    margin-top: 40px;
+}
+.terms h2 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+.terms_box {
+    height: 250px;
+    display: flex; flex-flow: column nowrap;
+    border: solid 2px #333;
+    border-radius: 15px;
+    padding: 50px 130px;
+}
+.t_box {
+    overflow: auto;
+    padding: 20px;
+    display: flex; flex-flow: column nowrap;
+}
+.terms .chk_box {
+    text-align: right;
+    padding-top: 10px;
+}
+.t_box .txt1 {
+    padding-top: 30px;
+}
+.t_box .txt2 {
+    padding: 40px 0 30px 0; 
+}
+.t_box .txt_detail {
+    padding-left: 8%;
+}
+/* 스크롤바 커스텀 */
+.t_box::-webkit-scrollbar {
+    width: 10px;
+}
+.t_box::-webkit-scrollbar-track {
+    background: #fff;
+}
+.t_box::-webkit-scrollbar-button {
+    display: none;
+}
+.t_box::-webkit-scrollbar-thumb { 
+    background: #eee;
+}
+.t_box::-webkit-scrollbar-track,
+.t_box::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+}
+.next_page {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    background: #3F77E5;
+    padding: 17px 117px;
+    border-radius: 10px;
+}
