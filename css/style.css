@@ -1981,6 +1981,42 @@ em {
     margin-top: 50px;
 }
 
+/* 청년참여공간 */
+
+.participationSpace {
+    max-width: 1280px;
+    display: flex; flex-flow: row nowrap;
+}
+.participationSpace ul {
+    width: 30%;
+    padding-right: 20px;
+}
+.participationSpace ul li {}
+.participationSpace ul li .t_tab {
+    display: flex; flex-flow: column nowrap;
+    text-align: center;
+    padding: 10px 0;
+    border: 2px solid #2970DB;
+    border-radius: 10px;
+}
+.participationSpace ul li .t_tab .title {
+    font-size: 2.0rem;
+    font-weight: 700;
+    color: #2970DB;
+}
+.participationSpace ul li .t_tab .type {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.participationSpace ul li .c_detail {
+    display: flex; flex-flow: column nowrap;
+    border: 2px solid #2970DB;
+    border-radius: 10px;
+}
+.tab_content {
+    width: 70%;
+}
+
 /* 반응형 */
 @media screen and (max-width: 1499px) {
 }
@@ -2076,8 +2112,8 @@ em {
 
 @media screen and (max-width: 821px) {
     /* 청년정책제언 슬로건 */
-    .suggestion .slogan {padding: 30px 40px;}
-    .suggestion .slogan img {width: 400px;}
+    .suggestion .slogan {padding: 0 40px 30px 40px;}
+    .suggestion .slogan img {width: 360px;}
     .suggestion .slogan .to_suggest {font-size: 1.6rem;}
 }
 @media screen and (max-width: 767px) {	
@@ -2152,6 +2188,9 @@ em {
         flex-direction: column;
         align-items: center;
         gap: 10px;
+    }
+    .suggestion .txt_box {
+        padding: 140px 15px;
     }
 }
 @media all and (max-width:520px) {
