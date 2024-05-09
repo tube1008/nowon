@@ -1983,15 +1983,15 @@ em {
 
 /* 청년참여공간 */
 
-.participationSpace {
+.participation_Space {
     width: 100%;
     display: flex; flex-flow: row nowrap;
 }
-.participationSpace ul {
+.participation_Space ul {
     width: 400px;
     padding-right: 20px;
 }
-.participationSpace ul li {
+.participation_Space ul li {
     border: 3px solid #2970DB;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -1999,72 +1999,40 @@ em {
 .participation .t_tab {
     display: flex; flex-flow: column nowrap;
     text-align: center;
-    padding: 10px 50px;
+    padding: 5px 0;
+    cursor: pointer;
 }
-.participation .t_tab {
-    color: #fff;
-    background: #2970DB;
+/* .show 활성화 */
+.participation .participation_Space .show {
+    display: flex;
 }
-.participation .t_tab:hover {
-    color: #212121;
-    background: #fff;
-    border-radius: 10px;
-    transition: 0.3s;
+.participation .participation_Space .t_tab .show {
+    display: block;
 }
+
 .participation .t_tab .tit {
     font-size: 2.0rem;
     font-weight: 700;
-    padding: 5px 0;
+    padding-bottom: 5px;
     letter-spacing: 1px;
 }
 .participation .t_tab .type {
     font-size: 1.5rem;
     font-weight: 400;
+    display: none;
 }
 .participation .detail_box {
     font-size: 1.8rem;
     font-weight: 500;
-    padding: 12px 40px;
-}
-/* 하위메뉴 애니메이션 */
-.participation .detail_box:hover {
-    transition: 0.3s;
-    color: #fff;
-    background: #2970DB;
+    padding: 10px 40px;
 }
 .participation .c_detail {
     display: flex; flex-flow: column nowrap;
-    max-height: 0; /* 기본적으로 숨겨진 상태 */
-    overflow: hidden; /* 내용이 넘칠 때 숨기기 */
-    transition: max-height 0.3s ease; /* 높이가 변할 때 애니메이션 적용 */
-}
-.participationSpace li:hover > .c_detail , 
-.participation .placeSel:hover > .c_detail {
-    display: block;
-    display: flex; flex-flow: column nowrap;
-        border-top: 2px solid #fff;
-    transition: 0.3s;
-        max-height: 300px; /* 호버 시 높이 증가 */
-        overflow: auto;
-}
-
-/* 스크롤바 커스텀 */
-.participation .c_detail::-webkit-scrollbar {
-    width: 10px;
-
-}
-.participation .c_detail::-webkit-scrollbar-track {
-    background: #fff;
-}
-.participation .c_detail::-webkit-scrollbar-button {
+    overflow: hidden;
+    cursor: pointer;
+    max-height: 400px;
+    overflow: auto;
     display: none;
-}
-.participation .c_detail::-webkit-scrollbar-thumb { 
-    background: #eee;
-}
-.participation .c_detail::-webkit-scrollbar-track,
-.participation .c_detail::-webkit-scrollbar-thumb {
-    border-radius: 5px;
 }
 
 .participation .tab_content {
@@ -2075,16 +2043,6 @@ em {
     border-radius: 10px;
     margin-bottom: 10px;
 }
-.participation .rental {
-    color: #fff;
-    background: #053276;
-}
-.participation .place:hover {
-    transition: 0.3s;
-    color: #fff;
-    background: #053276;
-}
-
 .participation .tab_content {
     display: flex; flex-flow: column nowrap;
 }
@@ -2096,7 +2054,7 @@ em {
     width: 100%;
 }
 .participation .place_img {
-    width: calc(100% - 300px); height: auto;
+    width: 69%; height: 100%;
 }
 .participation .place_img img {
     border-radius: 15px;
@@ -2104,41 +2062,57 @@ em {
 .participation .tab_content .location_place {
     display: flex; flex-flow: row nowrap;
     padding: 15px;
-    margin: 0 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border: 3px solid #eee;
     border-radius: 15px;
 }
 .participation .place_detail {
     width: 100%;
     display: flex; flex-flow: column nowrap;
-    padding: 0 0 20px 30px;
+    padding-left: 20px;
 }
 .participation .place_detail h2 {
     font-size: 2.0rem;
     color: #2970DB; font-weight: 700;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 .participation .place_detail .tag_search {
     font-size: 1.6rem; font-weight: 500;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+    letter-spacing: 1px;
 }
 .participation .place_info {
+    width: 100%;
     display: flex; flex-flow: column nowrap;
 }
-.participation .address {display: flex; align-items: center;}
-.participation .address img {width: 15px; height: auto; margin-right: 5px;}
+.participation .address {
+    display: flex; align-items: center;
+}
+.participation .address img {
+    width: 15px; height: auto; margin-right: 5px;
+}
 .participation .phone {
     display: flex; align-items: center;
     padding: 6px 0;
 }
-.participation .phone img {width: 15px; height: auto; margin-right: 5px;}
+.participation .phone img {
+    width: 15px; height: auto; margin-right: 5px;
+}
+.participation .page_sr {
+    max-height: 3em;
+    line-height: 1.5;
+    overflow: auto;
+}
 .participation .blog {
     display: flex; align-items: center;
+    text-decoration: underline;
 }
-.participation .blog img {width: 15px; height: auto; margin-right: 5px;}
+.participation .blog img {
+    width: 15px; height: auto; margin-right: 5px;
+}
 .participation .place_btn {
     text-align: right;
     margin-top: 30px;
+    display: none;
 }
 .participation .place_go {
     width: 235px;
@@ -2147,14 +2121,66 @@ em {
     padding: 12px 30px;
     background: #053276;
     border-radius: 10px;
-    /* 공간대여에서만 활성화 */
-    display: none;
+}
+
+/* 메뉴 호버 */
+.participation .detail_box:hover {
+    transition: 0.3s;
+    color: #fff;
+    background: #2970DB;
+}
+
+.participation .place:hover {
+    transition: 0.3s;
+    color: #fff;
+    background: #053276;
 }
 .participation .place_go:hover {
     transition: 0.3s;
     color: #053276;
     background: #fff;
-    border: 2px solid #053276;
+    border: 1px solid #053276;
+}
+
+/* 스크롤바 커스텀 */
+.participation .c_detail::-webkit-scrollbar {
+    width: 10px;
+}
+.participation .c_detail::-webkit-scrollbar-track {
+    background: #fff;
+}
+.participation .c_detail::-webkit-scrollbar-button {
+    display: none;
+}
+.participation .c_detail::-webkit-scrollbar-thumb { 
+    background: #2970DB;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+    border-radius: 8px;
+}
+.participation .c_detail::-webkit-scrollbar-track,
+.participation .c_detail::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+}
+
+.participation .page_sr::-webkit-scrollbar {
+    width: 12px;
+}
+.participation .page_sr::-webkit-scrollbar-track {
+    background: #ddd;
+}
+.participation .page_sr::-webkit-scrollbar-button {
+    display: none;
+}
+.participation .page_sr::-webkit-scrollbar-thumb { 
+    background: #2970DB;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+    border-radius: 8px;
+}
+.participation .page_sr::-webkit-scrollbar-track,
+.participation .page_sr::-webkit-scrollbar-thumb {
+    border-radius: 5px;
 }
 
 /* 반응형 */
@@ -2249,7 +2275,15 @@ em {
     .bizRequest , .suggestion .process_box ul .on{ display: block; }
     .bizRequest , .suggestion .process_box ul .not{ display: none; }
 
-    
+    .participation .tab_content .location_place {
+        flex-flow: column nowrap;
+    }
+    .participation .place_img {
+        width: 100%; margin: 0 auto;
+    }
+    .participation .tab_content .location_place .place_detail {
+        padding-left: 0;
+    }
 }
 
 @media screen and (max-width: 821px) {
@@ -2257,6 +2291,23 @@ em {
     .suggestion .slogan {padding: 0 40px 30px 40px;}
     .suggestion .slogan img {width: 360px;}
     .suggestion .slogan .to_suggest {font-size: 1.6rem;}
+    
+    /* participation 청년참여공간 */
+    .participation_Space {
+        flex-flow: column nowrap;
+    }
+    .participation_Space ul {
+        width: 100%; margin: 0 auto;
+        padding-right: 0;
+    }
+    .participation .t_tab {padding: 0;}
+    .participation .t_tab .tit {padding: 0;}
+    .participation .tab_content {
+        width: 100%;
+    }
+    .participation .c_detail {
+    max-height: 150px;
+    }
 }
 @media screen and (max-width: 767px) {	
 	.main_srch .srch_recom{
@@ -2281,7 +2332,6 @@ em {
 	.main_relation .relation_list li {
 	    width: calc(50% - 20px);
 	}
-	
 	
     .board .input_txt{
         width: calc(100% - 74px);
