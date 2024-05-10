@@ -1981,6 +1981,8 @@ em {
     margin-top: 50px;
 }
 
+/* participationSpace */
+
 /* 청년참여공간 */
 
 .participation_Space {
@@ -2076,9 +2078,13 @@ em {
     padding: 10px 0;
 }
 .participation .place_detail .tag_search {
+    max-height: 3em;
+    line-height: 1.5;
+    overflow: auto;
+    margin-bottom: 10px;
+}
+.participation .place_detail .tag_search .tag {
     font-size: 1.6rem; font-weight: 500;
-    padding-bottom: 10px;
-    letter-spacing: 1px;
 }
 .participation .place_info {
     width: 100%;
@@ -2117,7 +2123,8 @@ em {
 .participation .place_go {
     width: 235px;
     font-size: 1.8rem;
-    color: #fff; font-weight: 600;
+    color: #fff; 
+    font-weight: 600;
     padding: 12px 30px;
     background: #053276;
     border-radius: 10px;
@@ -2180,6 +2187,26 @@ em {
 }
 .participation .page_sr::-webkit-scrollbar-track,
 .participation .page_sr::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+}
+
+.participation .place_detail .tag_search::-webkit-scrollbar {
+    width: 12px;
+}
+.participation .place_detail .tag_search::-webkit-scrollbar-track {
+    background: #ddd;
+}
+.participation .place_detail .tag_search::-webkit-scrollbar-button {
+    display: none;
+}
+.participation .place_detail .tag_search::-webkit-scrollbar-thumb { 
+    background: #2970DB;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+    border-radius: 8px;
+}
+.participation .place_detail .tag_search::-webkit-scrollbar-track,
+.participation .place_detail .tag_search::-webkit-scrollbar-thumb {
     border-radius: 5px;
 }
 
@@ -2275,6 +2302,7 @@ em {
     .bizRequest , .suggestion .process_box ul .on{ display: block; }
     .bizRequest , .suggestion .process_box ul .not{ display: none; }
 
+    /* participation 청년참여공간 */
     .participation .tab_content .location_place {
         flex-flow: column nowrap;
     }
