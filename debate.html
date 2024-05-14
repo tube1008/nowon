@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/user/js/main.js"></script>
+
+    <title>청년토론 | 노원청년포탈</title>
+</head>
+
+<body>
+    <div id="skip_nav">
+        <a href="#main"><span>본문 바로가기</span></a>
+        <a href="#header"><span>주메뉴 바로가기</span></a>
+        <a href="#footer"><span>푸터 바로가기</span></a>
+    </div>
+    <div id="wrap">
+        <!-- ========== HEADER ========== -->
+        <jsp:include page="/user/mnu/headerMenu.do"></jsp:include>
+        <!-- ========== END HEADER ========== -->
+
+        <!-- ========== MAIN CONTENT ========== -->
+        <main id="main">
+            <section class="board debate_area" id="content-area">
+                <div class="title_box">
+                    <div class="path">
+                        <ul>
+                            <li class="path_item">
+                                <img src="/user/images/ico-home.png" alt="Home">
+                            </li>
+                            <li class="path_item">와글와글 청년목소리</li>
+                            <li class="path_item">청년토론</li>
+                        </ul>
+                    </div>
+                    <h2>청년토론</h2>
+                </div>
+                <div class="tab_list">
+                    <ul class="tab_type2">
+                        <li>
+                            <a href="#">청년정책제언</a>
+                        </li>
+                        <li>
+                            <a href="#">청년참여공간</a>
+                        </li>
+                        <li class="on">
+                            <a href="#">청년토론</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="debate_category">
+                        <a href="#" class="topic">전체</a>
+                        <a href="#" class="topic on">일자리</a>
+                        <a href="#" class="topic">주거</a>
+                        <a href="#" class="topic">금융복지</a>
+                        <a href="#" class="topic">교육문화</a>
+                        <a href="#" class="topic">기타</a>
+                    <!-- <div class="top_menu">
+                        <a href="#" class="topic">전체</a>
+                        <a href="#" class="topic on">일자리</a>
+                        <a href="#" class="topic">주거</a>
+                    </div>
+                    <div class="btm_menu">
+                        <a href="#" class="topic">금융복지</a>
+                        <a href="#" class="topic">교육문화</a>
+                        <a href="#" class="topic">기타</a>
+                    </div> -->
+                </div>
+                <div class="title_search">
+                    <p class="deb_tit">청년정책에 대한 숙의토론 공간입니다.</p>
+                    <div class="condition">
+                        <form id="board_srch" name="frm" action="/user/cop/bbs/selectBoardList.do" method="get">
+                            <input type="hidden" name="bbsId" value="">
+                            <input type="hidden" name="nttId" value="0">
+                            <input type="hidden" name="bbsTyCode" value="BBST03">
+                            <input type="hidden" name="bbsAttrbCode" value="BBSA03">
+                            <input name="pageIndex" type="hidden" value="1">
+                            <input name="searchCnd" type="hidden" value="">
+                            <span class="item f_search">
+                                <input id="searchText" class="input_txt" type="text" name="searchWrd" value=""
+                                    title="검색어 입력">
+                                <button class="sq_btn" type="submit"
+                                    onclick="fn_egov_search_noticeList('1'); return false;">검색</button>
+                                <!-- 조회 -->
+                            </span>
+                        </form>
+                    </div>
+                </div>
+                <table class="table notice_tb">
+                    <caption class="hide">청년토론 게시판</caption>
+                    <colgroup>
+                        <col style="width: 8%">
+                        <col style="width: 10%">
+                        <col style="width: auto">
+                        <col style="width: 12%">
+                        <col style="width: 12%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">번호</th>
+                            <th scope="col">유형</th>
+                            <th scope="col" class="tit">제목</th>
+                            <th scope="col">등록일</th>
+                            <th scope="col">조회수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10</td>
+                            <td>일자리</td>
+                            <td>환경분야 청년일자리 기회 강화 지원</td>
+                            <td>2024-05-10</td>
+                            <td>26</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>일자리</td>
+                            <td>세대융합형 베이비부머 창업 서포터즈</td>
+                            <td>2024-04-15</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="card-footer">
+                    <div class="paging" id="paging_div">
+                        <ul class="pagination justify-content-center">
+                            <ui:pagination paginationInfo="${paginationInfo}" type="renew"
+                                jsFunction="fn_egov_select_noticeList" />
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- ========== END MAIN CONTENT ========== -->
+
+        <!-- ========== FOOTER ========== -->
+
+        <!-- ========== END FOOTER ========== -->
+    </div>
+</body>
+
+</html>

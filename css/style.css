@@ -16,9 +16,10 @@
     margin: 0 auto 80px;
 }
 .main_pg .tit_row {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .main_pg h2{
 	font-size: 3.2rem;
@@ -42,7 +43,7 @@
 	position: relative;
 	left: auto;
 	right: auto;
-	height: 40px;
+	height: 30px;
 	margin: auto;
     top: unset;
 	color: #555;
@@ -177,7 +178,7 @@
 }
 .policy-sort{
 	display: inline-block;
-	padding: 4px 20px;
+	padding: 2px 16px;
 	font-weight: 600;
 	border-radius: 8px;
 	background: #eee;
@@ -241,7 +242,6 @@
     margin: 12px 0;
     font-size: 1.8rem;
     font-weight: 500;
-    font-family: 'SCoreDream';
 }
 .main-bn-area .policy-bn .txt:hover{
 	text-decoration: underline;
@@ -331,7 +331,7 @@
     width: 501px;
     height: 136px;
     margin: -60px auto 0;
-    background: url(/user/images/img/main-nwtxt.png) center center;
+    background: url(/user/images/img/main-nwtxt.png) center center no-repeat;
     background-size: contain;
 }
 .main_link .part1 h2{
@@ -355,16 +355,23 @@
 	margin-top: 68px;
 }
 .main_link .part1_link li{
-	width: 120px;
-	height: 120px;
+	position: relative;
+	width: calc((100% - 60px) / 4);
 	background: #fff;
 	border-radius: 50%;
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+}
+.main_link .part1_link li:after {
+	 content: "";
+	 display: block;
+	 padding-bottom: 100%;
 }
 .main_link .part1_link li:hover{
 	box-shadow: 0 0 16px rgba(48, 109, 238, 0.6);
 }
 .main_link .part1_link a{
+	position: absolute;
+	width: 100%;
 	height: 100%;
 	padding: 20px 19px;
     display: flex;
@@ -373,8 +380,7 @@
     justify-content: space-between;
 }
 .main_link .part1_link .img{
-	width: 54px;
-	height: 54px;
+	width: 65%;
 }
 .main_link .part1_link .txt{
 	font-size: 1.5rem;
@@ -412,7 +418,7 @@
 }
 .main_link .part2_link .txt{
 	max-width: calc(100% - 100px);
-	font-size: 2rem;
+	font-size: 1.8rem;
 }
 	
 .main_link .part2_evnt a{
@@ -449,7 +455,7 @@
     align-items: center;
     gap: 8px;
 	padding: 16px 20px;
-	color: 3C4466;
+	color: #3C4466;
 	font-size: 2.4rem;
 	font-weight: 600;
 	border-bottom: 1px solid #eee;
@@ -518,6 +524,7 @@
     width: 372px;
     height: 302px;
 	background: url(/user/images/img/main-bg3.png) no-repeat center;
+	background-size: contain;
 }
 .main_social .part1 h2{
 	margin-bottom: 14px;
@@ -563,6 +570,7 @@
 }
 .main_social .swiper-button-prev, .main_social .swiper-button-next{
 	width: 40px;
+	height: 40px;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 	border-radius: 50%;
 }
@@ -1806,7 +1814,15 @@ em {
     display: flex;
     align-items: center;
 }
+.suggestion .email_txt {
+	width: 29%; height: 50px;
+    background: #eee;
+    border: none;
+    font-size: 1.8rem;
+    text-align: center;
+}
 .suggestion .domain_txt {
+	margin-left : 15px;
     width: 29%; height: 50px;
     background: #eee;
     border: none;
@@ -2210,16 +2226,89 @@ em {
     border-radius: 5px;
 }
 
+/* debate_area 청년토론 */
+
+/* 카테고리 페이지 */
+.debate_area .debate_category {
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+.debate_area .debate_category .topic {
+    display: inline-block;
+    width: 15.7%; height: 50px;
+    font-size: 1.8rem;
+    color: #2970DB;
+    border: 2px solid #2970DB;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 0;
+}
+/* 버튼 활성화 */
+.debate_area .debate_category .on {
+    color: #fff;
+    background: #2970DB;
+}
+.debate_area .title_search {
+    display: flex; justify-content: space-between;
+    align-items: center;
+    padding-bottom: 24px;
+} 
+.debate_area .title_search .deb_tit {
+    font-size: 2.0rem; font-weight: 600;
+}
+.debate_area .table thead th {border: none;}
+
+/* debate_detail 청년토론 상세페이지 */
+
+.debate_area .theme_bnr {
+    width: 100%; height: 200px;
+    padding-left: 50px;
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between; align-items: center;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    background: #007ACB url(../images/job.png);
+    background-position: right;
+    background-repeat: no-repeat;
+}
+.debate_area .theme_bnr .bnr_tit {
+    font-size: 3.0rem; color: #fff;
+    font-weight: 600;
+}
+
+.debate_area .debate_item {
+    display: flex; flex-flow: column nowrap;
+}
+
+.debate_area .debate_item {}
+
 /* 반응형 */
 @media screen and (max-width: 1499px) {
 }
 @media screen and (max-width: 1299px) {
-    /* bizRequest, suggestion 입력절차 */
-	.bizRequest, .suggestion .process_box ul {width: 80%; margin: 0 auto;}
-	.bizRequest, .suggestion .process_box ul li {display: flex; flex-flow: column nowrap;}
+	/* bizRequest, suggestion 입력절차 */
+	.bizRequest .process_box ul {width: 80%; margin: 0 auto;}
+	.bizRequest .process_box ul li {display: flex; flex-flow: column nowrap;}
 }
 @media screen and (max-width: 1024px) {
 	/* 메인 */
+    .main_pg main{
+        /* padding: 30px 0 80px; */
+        padding: 120px 0 80px;
+    }
+    .main_pg section{
+    	margin: 0 auto 30px;
+    }
+    .main_pg section.main_srch{
+        margin-bottom: 10px;
+    }
+    .main_pg h2{
+    	font-size: 2.4rem;
+    }
+    .main_pg .part1 h2{
+    	font-size: 2.4rem;
+    }
 	.main_srch .srch_box {
 		gap: 10px;
 	    width: 90%;
@@ -2246,18 +2335,80 @@ em {
 	.main-bn-area .tab-box {
 	    padding: 16px 16px 40px;
 	}
+	.main-bn-area .policy-bn li{
+		aspect-ratio: 1.57 / 1;
+	}
+	.main-bn-area .policy-bn .date-box span{
+		font-size: 2rem;
+	}
+	.main-bn-area .policy-sort{
+		margin-bottom: 10px;
+	}
+	.policy-bn .move-btn{
+		height: 44px;
+	}
 	.split50 {
 		flex-direction: column;
+		gap: 30px;
 	}
 	.split50 > div {
 	    width: 100%;
 	}
+	.main_link{
+		padding-top: 30px
+	}
+	.main_link .part1{
+		padding: 0 20% 40px;
+	}
+	.main_link .part1 h2{
+		margin: 10px 0;
+		text-align: center;
+	}
+	.main_link .part1::before {
+		width: 290px;
+		height: 74px;
+		margin: -36px auto 0;
+    }
+    .main_link .part1_link{
+    	margin-top: 30px;
+    }
+    .main_pg .main-ntc{
+    	margin-bottom: 40px;
+    }
+    .main-ntc .ntc-box .box-tit{
+    	font-size: 2rem;
+    }
+    .main-ntc .ntc-box .tit{
+    	font-size: 1.8rem;
+    }
+    .main-ntc .ntc-box .txt{
+        margin: 6px 0 20px;
+    }
 	.main_social_area::before {
 	    width: 100%;
-	    height: 50%;
+	    height: 47%;
+	    border-radius: 0;
 	}
-	.main_social_area::before {
+	.main_social_area::after {
 	    background-size: contain;
+	}
+	.main_social .part1{
+		padding: 20px 0 40px;
+	}
+	.main_social .part1::after{
+		top: -30px;
+	}
+	.main_social .part1_social .img{
+		height: 2rem;
+	}
+	.main_social .tit_row{
+		margin-bottom: 16px;
+	}
+	.main_social .part2 {
+	    position: relative;
+	    padding: 0 0 50px;
+	}
+	.main_social .part2_social .img{
 	}
 	.main_relation{
 		flex-direction: column;
@@ -2285,23 +2436,23 @@ em {
 	}
 	.year_calendar .calendar_wrap{width:1200px;}
 	/* bizRequest, suggestion 입력절차 */
-    .bizRequest , .suggestion .process_box {
+    .bizRequest .process_box {
         width: 80%;
         margin: 0 auto;
         display: flex; justify-content: center;
     }
-    .bizRequest , .suggestion .process_box ul {width: 100%; justify-content: center;}
-    .bizRequest , .suggestion .process_box ul li {
+    .bizRequest .process_box ul {width: 100%; justify-content: center;}
+    .bizRequest .process_box ul li {
         width: 100%;
         display: inline-block;
         margin: 0 10px;
         font-size: 2.0rem; 
     }
-    .bizRequest , .suggestion .process_box ul .num {font-size: 1.8rem;}
+    .bizRequest .process_box ul .num {font-size: 1.8rem;}
     /* 페이지가 넘어갈 때 해당 li와 num이 함께 보이도록 하는 CSS */
-    .bizRequest , .suggestion .process_box ul .on{ display: block; }
-    .bizRequest , .suggestion .process_box ul .not{ display: none; }
-
+    .bizRequest .process_box ul .on{ display: block; }
+    .bizRequest .process_box ul .not{ display: none; }
+    
     /* participation 청년참여공간 */
     .participation .tab_content .location_place {
         flex-flow: column nowrap;
@@ -2313,11 +2464,10 @@ em {
         padding-left: 0;
     }
 }
-
 @media screen and (max-width: 821px) {
-    /* 청년정책제언 슬로건 */
-    .suggestion .slogan {padding: 0 40px 30px 40px;}
-    .suggestion .slogan img {width: 360px;}
+	/* 청년정책제언 슬로건 */
+    .suggestion .slogan {padding: 30px 40px;}
+    .suggestion .slogan img {width: 400px;}
     .suggestion .slogan .to_suggest {font-size: 1.6rem;}
     
     /* participation 청년참여공간 */
@@ -2353,6 +2503,16 @@ em {
 	.main-bn-area .inform-bn img {
 	    border-radius: 0 0 20px 20px;
 	}
+	.main_link .part1 {
+    	padding: 0 15% 40px;
+    }
+    .main_link .part1_link a{
+    	padding: 15% 12%
+    }
+    .main_link .part1_link .img {
+	    width: 60%;
+	}
+	
 	.main_relation{
 		padding: 20px;
 		width: 92%;
@@ -2360,6 +2520,7 @@ em {
 	.main_relation .relation_list li {
 	    width: calc(50% - 20px);
 	}
+	
 	
     .board .input_txt{
         width: calc(100% - 74px);
@@ -2409,14 +2570,76 @@ em {
         align-items: center;
         gap: 10px;
     }
-    .suggestion .txt_box {
-        padding: 140px 15px;
-    }
 }
 @media all and (max-width:520px) {
+	.main_pg h2{
+		font-size: 2.2rem;
+	}
+	.main_pg .part1 h2{
+		font-size: 2.2rem;
+	}
 	.main_srch .srch_recom {
     	width: 90%;
     }
+    .main_srch .srch_box {
+        width: 98%;
+    }
+    .main-bn-area .policy-bn li{
+        padding: 20px 10px 40px;
+    }
+    .main-bn-area .policy-bn .date-box span{
+        padding: 4px 10px;
+    }
+    .policy-bn .move-btn{
+        width: 40%;
+    }
+    .main_link ul {
+        gap: 14px;
+    }
+    .main_link .part1 {
+    	padding: 0 4% 40px;
+    }
+    .main_link .part1_link li {
+	    width: calc((100% - 42px) / 4);
+    }
+    .main_link .part1_link .img {
+	    width: 55%;
+	}
+	.main_link .part2_link li {
+	    padding: 10px 16px;
+	    border-radius: 12px;
+	}
+	.main_link .part2_link a{
+		flex-direction: column;
+		gap: 2px;
+	}
+	.main_link .part2_link .txt{
+		max-width: 100%;
+		font-size: 1.6rem;
+	}
+	.main-ntc .ntc-box .box-tit::before {
+	    width: 30px;
+	    height: 30px;
+    }
+	.main-ntc .ntc-box a {
+	    padding: 24px;
+	}
+	.main-ntc .img{
+	    width: 30px;
+    	height: 30px;
+	}
+	.main_social .part1::after{
+		width: 240px;
+    	height: 195px;
+	}
+	.main_social .swiper-button-prev, .main_social .swiper-button-next{
+		width: 30px;
+    	height: 30px;
+	}
+	.main_social .part2_social .tit::before{
+		width: 32px;
+	    height: 32px;
+	}
 	.board .board_title h3, .board .board_info{
 		margin-left: 0;
 	}
@@ -2439,7 +2662,7 @@ em {
 	.data-move p:first-child {
 	    margin-right: 20px;
 	}
-    /* 청년정책제언 슬로건 */
+	/* 청년정책제언 슬로건 */
 	.suggestion .slogan img {width: 300px;}
 }
 @media all and (max-width:479px){
@@ -2481,6 +2704,6 @@ em {
 	.data-move .d-move{
 		width: 78%;
 	}
-    /* 청년정책제언 슬로건 */
+	 /* 청년정책제언 슬로건 */
 	.suggestion .slogan img {width: 230px;}
 }
