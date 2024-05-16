@@ -2072,10 +2072,12 @@ em {
     width: 100%;
 }
 .participation .place_img {
-    width: 69%; height: 100%;
+    width: 100%; height: 100%;
+    text-align: center;
 }
 .participation .place_img img {
     border-radius: 15px;
+    width: 70%;
 }
 .participation .tab_content .location_place {
     display: flex; flex-flow: row nowrap;
@@ -2120,11 +2122,14 @@ em {
     width: 15px; height: auto; margin-right: 5px;
 }
 .participation .page_sr {
+    width: 100%;
     max-height: 3em;
     line-height: 1.5;
     overflow: auto;
+    display: flex; flex-flow: column nowrap;
 }
 .participation .blog {
+    width: max-content;
     display: flex; align-items: center;
     text-decoration: underline;
 }
@@ -2278,10 +2283,139 @@ em {
 }
 
 .debate_area .debate_item {
+    margin: 0 auto;
     display: flex; flex-flow: column nowrap;
+    font-weight: 600;
+    width: 100%; max-height: 250px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    border-top: 3px solid #2970DB;
+    overflow: auto;
+    padding: 35px 40px;
 }
 
-.debate_area .debate_item {}
+.debate_area .debate_item .deb_item {
+    font-size: 2.0rem; color: #2970DB;
+    font-weight: 600;
+    padding-bottom: 15px;
+} 
+.debate_area .debate_item .deb_content {
+    font-size: 1.6rem; font-weight: 400;
+}
+.debate_area .deb_txtbox {
+    width: 100%; max-height: 530px;
+    overflow: auto;
+    margin: 40px 0;
+}
+.debate_area .deb_txtbox .comment_box {
+    width: 98.5%; height: auto;
+    background: #eee;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+}
+.debate_area .deb_txtbox .comment_box .user_ctrl {
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.debate_area .deb_txtbox .comment_box .user_ctrl .user_info {
+    padding-bottom: 5px;
+}
+.debate_area .deb_txtbox .comment_box .user_ctrl .user_info .user_name {
+    font-size: 1.8rem; font-weight: 600;
+}
+.debate_area .deb_txtbox .comment_box .user_ctrl .user_info .day_write {
+    font-size: 1.6rem; color: #666;
+}
+.debate_area .deb_txtbox .comment_box .user_ctrl .delete_cmt {
+    font-weight: 600; color: #666;
+}
+.debate_area .text_cmt {
+    display: flex; flex-flow: column nowrap;
+}
+.debate_area .text_cmt .cmt_tit {
+    font-size: 1.6rem; font-weight: 600;
+}
+.debate_area .text_cmt .usr_pwd {
+    display: flex; flex-flow: row nowrap;
+    margin: 10px 0;
+}
+.debate_area .text_cmt .usr_pwd fieldset .name {
+    width: 200px; height: 45px;
+    background: #eee;
+    padding: 8px 0;
+    border-radius: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+.debate_area .text_cmt .usr_pwd fieldset .name::placeholder {
+    color: #666; text-align: center;
+}
+.debate_area .text_cmt .usr_pwd fieldset .pwd::placeholder {
+    color: #666; text-align: center;
+}
+.debate_area .text_cmt .usr_pwd fieldset .pwd {
+    width: 200px; height: 45px;
+    background: #eee;
+    padding: 8px 0;
+    border-radius: 10px; 
+    text-align: center;
+}
+.debate_area .text_cmt .cmt_box {
+    width: 100%; height: 250px;
+    border: 2px solid #333;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 1.8rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-bottom: 10px;
+    resize: none;
+}
+.debate_area .text_cmt .save_cmt {
+    font-size: 2.0rem;
+    padding: 10px 30px;
+    background: #ddd;
+    border-radius: 10px;
+    margin-left: auto;
+}
+.debate_area .list {
+    display: flex; justify-content: center;
+    margin-top: 40px;
+}
+.debate_area .list .to_list {
+    font-size: 2.0rem; font-weight: 500;
+    color: #fff;
+    background: #3F77E5;
+    padding: 15px 88px;
+    border-radius: 10px;
+}
+
+
+/* 스크롤바 커스텀 */
+.debate_area .deb_txtbox::-webkit-scrollbar,
+.debate_area .debate_item::-webkit-scrollbar {
+    width: 10px; 
+}
+
+.debate_area .deb_txtbox::-webkit-scrollbar-track,
+.debate_area .debate_item::-webkit-scrollbar-track {
+    background: #fff;
+}
+.debate_area .deb_txtbox::-webkit-scrollbar-button,
+.debate_area .debate_item::-webkit-scrollbar-button {
+    display: none;
+}
+.debate_area .deb_txtbox::-webkit-scrollbar-thumb, 
+.debate_area .debate_item::-webkit-scrollbar-thumb { 
+    background: #eee;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+    border-radius: 8px;
+}
+.debate_area .debate_item::-webkit-scrollbar-track,
+.debate_area .debate_item::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+}
+
 
 /* 반응형 */
 @media screen and (max-width: 1499px) {
@@ -2463,6 +2597,10 @@ em {
     .participation .tab_content .location_place .place_detail {
         padding-left: 0;
     }
+
+    .debate_area .theme_bnr .bnr_tit {
+        width: 40%;
+    }
 }
 @media screen and (max-width: 821px) {
 	/* 청년정책제언 슬로건 */
@@ -2485,6 +2623,15 @@ em {
     }
     .participation .c_detail {
     max-height: 150px;
+    }
+
+    .debate_area .theme_bnr {
+        background-image: none;
+        text-align: center;
+        padding-left: 0;
+    }
+    .debate_area .theme_bnr .bnr_tit {
+        width: 100%;
     }
 }
 @media screen and (max-width: 767px) {	
@@ -2569,6 +2716,16 @@ em {
         flex-direction: column;
         align-items: center;
         gap: 10px;
+    }
+
+    .debate_area .title_search {
+    flex-flow: column nowrap;
+    }
+    .debate_area .title_search .deb_tit {
+        font-size: 2.5rem;
+    }
+    .debate_area .title_search .condition {
+        margin-top: 20px;
     }
 }
 @media all and (max-width:520px) {
@@ -2664,6 +2821,13 @@ em {
 	}
 	/* 청년정책제언 슬로건 */
 	.suggestion .slogan img {width: 300px;}
+
+    .debate_area .theme_bnr .bnr_tit {font-size: 2.6rem;}
+
+    .debate_area .text_cmt .usr_pwd {
+        margin: 0 auto;
+        padding: 10px;
+    }
 }
 @media all and (max-width:479px){
 	.board .board_title h3{
