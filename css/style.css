@@ -2051,6 +2051,7 @@ em {
     max-height: 400px;
     overflow: auto;
     display: none;
+    transition: max-height 0.5s ease-out;
 }
 
 .participation .tab_content {
@@ -2273,7 +2274,7 @@ em {
     justify-content: space-between; align-items: center;
     border-radius: 10px;
     margin-bottom: 40px;
-    background: #007ACB url(../images/job.png);
+    background: #007ACB url(../images/deb_default_all.png);
     background-position: right;
     background-repeat: no-repeat;
 }
