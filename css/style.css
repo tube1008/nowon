@@ -2033,7 +2033,15 @@ em {
     font-weight: 700;
     padding-bottom: 5px;
     letter-spacing: 1px;
+    display: flex; align-items: center;
+    justify-content: center;
+    /* background: url(../images/black_arrow.png) no-repeat 64% 45%; */
 }
+.participation .t_tab .tit img {
+    width: 9px;
+    margin-left: 10px;
+} 
+
 .participation .t_tab .type {
     font-size: 1.5rem;
     font-weight: 400;
@@ -2073,12 +2081,11 @@ em {
     width: 100%;
 }
 .participation .place_img {
-    width: 100%; height: 100%;
+    width: 70%; height: auto;
     text-align: center;
 }
 .participation .place_img img {
     border-radius: 15px;
-    width: 70%;
 }
 .participation .tab_content .location_place {
     display: flex; flex-flow: row nowrap;
@@ -2153,10 +2160,20 @@ em {
 }
 
 /* 메뉴 호버 */
+.participation .t_tab:hover {
+    transition: 0.3s;
+    color: #fff;
+    background: #2970DB;
+    /* background: #0066B3 url(../images/white_arrow.png) no-repeat 64% 30%; */
+}
+
 .participation .detail_box:hover {
     transition: 0.3s;
     color: #fff;
     background: #2970DB;
+}
+.participation .t_tab:hover .tit img {
+    filter: brightness() invert(1);
 }
 
 .participation .place:hover {
@@ -2261,21 +2278,21 @@ em {
     padding-bottom: 24px;
 } 
 .debate_area .title_search .deb_tit {
-    font-size: 2.0rem; font-weight: 600;
+    font-size: 2.4rem; font-weight: 600;
+    font-family: 'SCoreDream';
 }
 .debate_area .table thead th {border: none;}
 
 /* debate_detail 청년토론 상세페이지 */
 
 .debate_area .theme_bnr {
-    width: 100%; height: 200px;
-    padding-left: 50px;
+    height: 200px;
+    padding: 0 50px;
     display: flex; flex-flow: row nowrap;
     justify-content: space-between; align-items: center;
-    border-radius: 10px;
     margin-bottom: 40px;
-    background: #007ACB url(../images/deb_default_all.png);
-    background-position: right;
+    background: url(../images/deb_default_all.png);
+    background-position: 100% -10%;
     background-repeat: no-repeat;
 }
 .debate_area .theme_bnr .bnr_tit {
@@ -2287,17 +2304,17 @@ em {
     margin: 0 auto;
     display: flex; flex-flow: column nowrap;
     font-weight: 600;
-    width: 100%; max-height: 250px;
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; max-height: 300px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
     border-top: 3px solid #2970DB;
     overflow: auto;
     padding: 35px 40px;
 }
-
 .debate_area .debate_item .deb_item {
     font-size: 2.0rem; color: #2970DB;
     font-weight: 600;
     padding-bottom: 15px;
+    filter: grayscale(80%);
 } 
 .debate_area .debate_item .deb_content {
     font-size: 1.6rem; font-weight: 400;
@@ -2342,9 +2359,10 @@ em {
 }
 .debate_area .text_cmt .usr_pwd fieldset .name {
     width: 200px; height: 45px;
-    background: #eee;
+    background: #fff;
     padding: 8px 0;
     border-radius: 10px;
+    border: 1px solid #333;
     margin-right: 10px;
     text-align: center;
 }
@@ -2356,9 +2374,10 @@ em {
 }
 .debate_area .text_cmt .usr_pwd fieldset .pwd {
     width: 200px; height: 45px;
-    background: #eee;
+    background: #fff;
     padding: 8px 0;
-    border-radius: 10px; 
+    border-radius: 10px;
+    border: 1px solid #333;
     text-align: center;
 }
 .debate_area .text_cmt .cmt_box {
@@ -2367,16 +2386,17 @@ em {
     border-radius: 15px;
     padding: 20px;
     font-size: 1.8rem;
-    font-family: 'Noto Sans KR', sans-serif;
+        font-family: 'Noto Sans KR', sans-serif;
     margin-bottom: 10px;
     resize: none;
 }
 .debate_area .text_cmt .save_cmt {
     font-size: 2.0rem;
-    padding: 10px 30px;
+    padding: 10px 57px;
     background: #ddd;
     border-radius: 10px;
     margin-left: auto;
+    color: #fff;
 }
 .debate_area .list {
     display: flex; justify-content: center;
@@ -2417,7 +2437,155 @@ em {
     border-radius: 5px;
 }
 
+/* talent 청년인재등록페이지 */
 
+.talent_box {
+    
+}
+.talent_box .tal_tit {
+    margin-bottom: 20px;
+    text-align: center; 
+}
+.talent_box .tal_tit h2 {
+    font-size: 3.0rem; font-weight: 600;
+    font-family: 'SCoreDream';
+}
+.talent_box .detail_box .tal_detail {
+    width: 70%; margin: 0 auto;
+    border-bottom: 2px solid #007ACB;
+    margin-bottom: 40px;
+}
+.talent_box .tal_detail {
+    font-size: 1.8rem;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.talent_box .tal_info {
+    display: flex; flex-flow: column nowrap;
+    justify-content: center;
+    border: 2px solid #333;
+    border-radius: 15px;
+    padding: 80px 0;
+}
+.talent_box .tal_info .regist {
+    padding-bottom: 30px;
+}
+
+.talent_box .tal_info .regist .info {
+    font-size: 1.8rem; font-weight: 600;
+    color: #2970DB; padding-right: 10px;
+}
+
+.talent_box .tal_info .regist .detail {
+    font-size: 1.8rem; font-weight: 300;
+}
+.talent_box .tal_info .regist .detail .bold {
+    font-weight: 300;
+}
+.talent_box .tal_info .watch {
+    display: flex; flex-flow: row nowrap;
+    align-items: center;
+}
+.talent_box .tal_info .watch .watch_img {
+    
+}
+.talent_box .tal_info .watch .watch_img img {
+    width: 19px; height: 19px;
+}
+
+.talent_box .information {
+    display: flex; flex-flow: column nowrap;
+    justify-content: center;
+    border: 2px solid #333;
+    border-radius: 15px;
+    padding: 80px 0;
+}
+/* 신청자 */
+.talent_box .user_name {
+	display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+}
+.talent_box .user_name .title_name {
+    width: 100px;
+    font-size: 2.0rem; font-weight: 700;
+}
+.talent_box .user_name .name {
+    width: 90%; height: 50px;
+    background: #eee;
+    padding: 15px;
+    font-size: 1.8rem;
+}
+/* 연락처 */
+.talent_box .user_tel {
+    display: flex; align-items: center;
+    padding-bottom: 30px;
+}
+.talent_box .title_tel {
+    width: 100px;
+    font-size: 2.0rem; font-weight: 700;
+}
+.talent_box .tel {
+	width: 90%;
+    display: flex; justify-content: space-between;
+    align-items: center;
+}
+.talent_box .tel .num1, 
+.talent_box .tel .num2, 
+.talent_box .tel .num3 {
+    width: 29%; height: 50px;
+    background: #eee;
+    border: none;
+    font-size: 1.8rem;
+    text-align: center;
+}
+.talent_box .hyphen {
+    font-weight: 700;
+    text-align: center;
+    padding : 0 15px;
+}
+/* 이메일 */
+.talent_box .user_email {
+    display: flex; align-items: center;
+    padding-bottom: 30px;
+}
+.talent_box .title_mail {
+    width: 100px;
+    font-size: 2.0rem; font-weight: 700;
+}
+.talent_box .mail_box {
+	width: 90%;
+    display: flex;
+    align-items: center;
+}
+.talent_box .email_txt {
+	width: 29%; height: 50px;
+    background: #eee;
+    border: none;
+    font-size: 1.8rem;
+    text-align: center;
+}
+.talent_box .domain_txt {
+	margin-left : 15px;
+    width: 29%; height: 50px;
+    background: #eee;
+    border: none;
+    font-size: 1.8rem;
+    text-align: center;
+}
+.talent_box .user_email .txt {
+    font-weight: 700;
+    padding: 0 15px;
+}
+.talent_box .domain_list {
+    width: 29%; height: 50px;
+    border: none;
+    border-radius: 0px;
+    font-size: 1.8rem;
+    font-weight: 400;
+    background: url(/user/images/ico-arrow-down.png) no-repeat 90% 50% #eee;
+    font-family: 'Noto Sans KR', sans-serif;
+}
 /* 반응형 */
 @media screen and (max-width: 1499px) {
 }
@@ -2602,6 +2770,10 @@ em {
     .debate_area .theme_bnr .bnr_tit {
         width: 40%;
     }
+    .debate_area .theme_bnr {
+        background-position: 90%;
+        border-radius: 10px;
+    }
 }
 @media screen and (max-width: 821px) {
 	/* 청년정책제언 슬로건 */
@@ -2627,6 +2799,8 @@ em {
     }
 
     .debate_area .theme_bnr {
+        background: #007ACB;
+        border-radius: 10px;
         background-image: none;
         text-align: center;
         padding-left: 0;

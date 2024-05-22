@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/user/js/main.js"></script>
+    <script src="script/practice.js"></script>
+
+    <title>청년정책제언 | 노원청년포탈</title>
+</head>
+
+<body>
+    <div id="skip_nav">
+        <a href="#main"><span>본문 바로가기</span></a>
+        <a href="#header"><span>주메뉴 바로가기</span></a>
+        <a href="#footer"><span>푸터 바로가기</span></a>
+    </div>
+    <div id="wrap">
+        <!-- ========== HEADER ========== -->
+        <jsp:include page="/user/mnu/headerMenu.do"></jsp:include>
+        <!-- ========== END HEADER ========== -->
+
+        <!-- ========== MAIN CONTENT ========== -->
+        <main id="main">
+            <section class="board talent" id="content-area">
+                <div class="title_box">
+                    <div class="path">
+                        <ul>
+                            <li class="path_item">
+                                <img src="/user/images/ico-home.png" alt="Home">
+                            </li>
+                            <li class="path_item">와글와글 청년목소리</li>
+                            <li class="path_item">청년인재등록</li>
+                        </ul>
+                    </div>
+                    <h2>청년인재등록</h2>
+                </div>
+                <div class="tab_list">
+                    <ul class="tab_type2">
+                        <li>
+                            <a href="#">청년정책제언</a>
+                        </li>
+                        <li>
+                            <a href="#">청년참여공간</a>
+                        </li>
+                        <li>
+                            <a href="#">청년토론</a>
+                        </li>
+                        <li class="on">
+                            <a href="#">청년인재등록</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="talent_box">
+                    <div class="tal_tit">
+                        <h2>청년이 주인공!!</h2>
+                    </div>
+                    <div class="detail_box">
+                        <p class="tal_detail">
+                            노원에서 취업연계, 청년패널을 모집하며, 노원구에 거주하지 않더라도 인재 등록이 가능합니다.<br>
+                            청년들의 다양한 목소리에 귀를 기울이고 다양한곳에 참여를 확대하고, 노원의 미래를 이끌어갈 청년인재를 모집합니다.
+                        </p>
+                    </div>
+                    <div class="tal_info">
+                        <div class="regist">
+                            <span class="info">등록대상</span>
+                            <span class="detail">노원구에 거주 또는 활동하고 있는 <span class="bold">만19세 ~ 39세 청년</span> 누구나 등록가능하며 해당 목적이외의 용도로 사용되지
+                                않습니다.</span>
+                        </div>
+                        <div class="regist">
+                            <span class="info">활동내용</span>
+                            <span class="detail">노원구 취업연계 활동 및 청년패널</span>
+                        </div>
+                        <div class="regist">
+                            <span class="info">문의</span>
+                            <span class="detail">02)2116-0592</span>
+                        </div>
+                        <div class="watch">
+                            <p class="watch_img"><img src="./images/talent_info.png" alt="주의사항"></p>
+                            <span class="ditail">청년의 참여가 필요한 곳에 적합한 인재를 추천하기 위해 미리 인력을 확보하는 것으로 등록과 동시에 패널로 활동하는 것은
+                                아님.<br>
+                                패널에 성격에 따라 추천이 제한될 수 있음.</span>
+                        </div>
+                    </div>
+                    <div class="chk_box">
+                        <input type="checkbox" id="chk1">
+                        <label for="chk1">노원구에 거주 또는 활동하는 만19세~39세 청년으로 청년인재등록에 동의합니다.</label>
+                    </div>
+                    <div class="information">
+                        <form action="#" method="post" class="user_info">
+                            <fieldset>
+                                <legend class="hide">신청양식</legend>
+                                <p class="essential"><em>*</em>필수항목이므로 반드시 입력해 주시기 바랍니다.</p>
+                                <div class="user_name">
+                                    <span class="title_name">신청자<em>*</em></span>
+                                    <input type="text" class="name">
+                                </div>
+                                <div class="user_tel">
+                                    <span class="title_tel">연락처<em>*</em></span>
+                                    <div class="tel">
+                                        <input type="tel" class="num num1" maxlength="3">
+                                        <span class="hyphen">-</span>
+                                        <input type="tel" class="num num2" maxlength="4">
+                                        <span class="hyphen">-</span>
+                                        <input type="tel" class="num num3" maxlength="4">
+                                    </div>
+                                </div>
+                                <div class="user_email">
+                                    <span class="title_mail">e-mail<em>*</em></span>
+                                    <div class="mail_box">
+                                        <input type="email" class="domain_txt">
+                                        <span class="txt">@</span>
+                                        <select name="mail_address" class="domain_list">
+                                            <option value="blank" disabled selected>선택하세요</option>
+                                            <option value="type">직접입력</option>
+                                            <option value="naver.com">naver.com</option>
+                                            <option value="google.com">google.com</option>
+                                            <option value="daum.com">daum.com</option>
+                                            <option value="nate.com">nate.com</option>
+                                            <option value="hanmail.net">hanmail.net</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="chk_box">
+                        <input type="checkbox" id="chk2">
+                        <label for="chk2">청년인재등록 동의합니다.</label>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- ========== END MAIN CONTENT ========== -->
+
+        <!-- ========== FOOTER ========== -->
+
+        <!-- ========== END FOOTER ========== -->
+    </div>
+</body>
+
+</html>
