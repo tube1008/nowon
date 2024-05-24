@@ -2344,7 +2344,12 @@ em {
 .debate_area .deb_txtbox .comment_box .user_ctrl .user_info .day_write {
     font-size: 1.6rem; color: #666;
 }
-.debate_area .deb_txtbox .comment_box .user_ctrl .delete_cmt {
+.debate_area .deb_txtbox .comment_box .user_ctrl .cmt_btn {}
+.debate_area .deb_txtbox .comment_box .user_ctrl .cmt_btn .edit_cmt {
+    font-weight: 600; color: #666;
+    margin-right: 10px;
+}
+.debate_area .deb_txtbox .comment_box .user_ctrl .cmt_btn .delete_cmt {
     font-weight: 600; color: #666;
 }
 .debate_area .text_cmt {
@@ -2463,14 +2468,24 @@ em {
     font-family: 'SCoreDream';
 }
 .talent_box .detail_box {
-    padding: 20px 0;
-    border-top: 5px dashed #007ACB;
-    border-bottom: 5px dashed #007ACB;
     margin: 10px 0 40px 0;
+    display: flex; justify-content: center;
 }
 .talent_box .tal_detail {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    font-weight: 300;
     text-align: center;
+    padding-bottom: 15px;
+    position: relative;
+}
+.talent_box .tal_detail::after {
+    content: "";
+    position: absolute;
+    left: -2.5%;
+    bottom: 1%;
+    height: 2px;
+    width: 105%;
+    background: #007ACB;
 }
 .talent_box .tal_info {
     display: flex; flex-flow: column nowrap;
@@ -2483,10 +2498,8 @@ em {
 .talent_box .tal_info .regist {
     padding-bottom: 30px;
 }
-.talent_box .tal_info .regist .ph {
-}
 .talent_box .tal_info .regist .info {
-    font-size: 1.8rem; font-weight: 600;
+    font-size: 1.8rem;
     color: #2970DB; padding-right: 10px;
 }
 .talent_box .tal_info .regist .detail {
@@ -2502,8 +2515,11 @@ em {
 .talent_box .tal_info .watch .watch_img img {
     width: 15px; height: 15px;
 }
+.talent_box .tal_info .watch .detail {
+    font-weight: 300;
+}
 .talent_box .chk_box {
-    padding: 20px 0 40px 0; text-align: right;
+    padding: 10px 0 40px 0; text-align: right;
 }
 .talent_box .chk_box label {
     font-size: 1.6rem;
@@ -2522,8 +2538,8 @@ em {
     padding-bottom: 10px;
     font-size: 1.5rem;
 } 
-.talent_box .essential em {font-size: 1.5rem; padding-right: 5px;}
-em {color: #FF8A00; padding-left: 10px;}
+.talent_box .essential em {font-size: 2.0rem; padding-right: 5px;}
+em {color: #FF8A00;}
 /* 신청자 */
 .talent_box .user_name {
 	display: flex;
@@ -2856,7 +2872,8 @@ em {color: #FF8A00; padding-left: 10px;}
     }
     /* 청년인재등록 페이지 */
     .talent_box .detail_box .tal_detail {
-        padding: 0 15px;
+        padding: 0 0 10px 0;
+        margin: 0 10px;
     }
     .talent_box .tal_info {
         padding: 30px;
