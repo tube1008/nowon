@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="/user/js/jquery-3.7.1.min.js"></script>
+    <script src="/user/js/main.js"></script>
+
+    <title>정책캘린더 | 노원청년포탈</title>
+</head>
+
+<body>
+    <div id="skip_nav">
+        <a href="#main"><span>본문 바로가기</span></a>
+        <a href="#header"><span>주메뉴 바로가기</span></a>
+        <a href="#footer"><span>푸터 바로가기</span></a>
+    </div>
+    <div id="wrap">
+        <!-- ========== HEADER ========== -->
+        <jsp:include page="/user/mnu/headerMenu.do"></jsp:include>
+        <!-- ========== END HEADER ========== -->
+
+        <!-- ========== MAIN CONTENT ========== -->
+        <main id="main">
+            <section class="board" id="content-area">
+                <div class="title_box">
+                    <div class="path">
+                        <ul>
+                            <li class="path_item">
+                                <img src="/user/images/ico-home.png" alt="Home">
+                            </li>
+                            <li class="path_item">신통방통 청년도우미</li>
+                            <li class="path_item">정책캘린더</li>
+                        </ul>
+                    </div>
+                    <h2>정책캘린더</h2>
+                </div>
+                <div class="tab_list">
+                    <ul class="tab_type2">
+                        <li class="on">
+                            <a href="/user/uss/ion/biz/BizReceptFormList.do">정책캘린더</a>
+                        </li>
+
+                        <li>
+                            <a href="/user/uss/ion/biz/YearCalendar.do">연간일정</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cont_box">
+                    <div class="board calendar">
+                        <div class="board_title">
+                            <div>
+                                <h3>
+                                    <c:out value="${bizFormVO.bizName }" />
+                                </h3>
+                                <div class="board_info">
+                                    <p><span class="info_genre">작성일</span>
+                                        <c:out value="${bizFormVO.registDt }" />
+                                    </p>
+                                </div>
+                            </div>
+                            <c:if test="${bizFormVO.tmplatSn != 0 }">
+                                <a href="/user/uss/ion/biz/BizRequest.do?bizFormSn=<c:out value="
+                                    ${bizFormVO.bizFormSn}" />" class="sq_btn three list_btn">
+                                신청하기
+                                </a>
+                            </c:if>
+                        </div>
+                        <div class="board_txt">
+                            <p>
+                                <c:if test="${bizFormVO.imgFileId != null }">
+                                    <img src='<c:url value=' /cmm/fms/getImage.do' />?atchFileId=
+                                    <c:out value="${bizFormVO.imgFileId}" />&fileSn=
+                                    <c:out value="${bizFormVO.imgFileSn}" />' alt="파일보기링크" />
+                                </c:if>
+                                ${bizFormVO.bizDetail }
+                                $(document).ready(function() {
+                                $('.next_page').click(function(event){
+                                
+                                var checkbox1 = document.getElementById('chk1');
+                                var checkbox2 = document.getElementById('chk2');
+                                if(checkbox1.checked && checkbox2.checked ){
+                                
+                                
+                                
+                                }else{
+                                event.preventDefault();
+                                alert('약관 동의가 필요합니다.');
+                                }
+                                
+                                });
+                                });
+                            </p>
+                            <div class="board_contents">
+                                <div class="contents_img">
+                                    <p class="img"><img src="./images/poster.png" alt="2024년 노원구 일자리 박람회"></p>
+                                </div>
+                                <div class="contents_txt">
+                                    <span class="contents_tit">사업제목을입력해주세요.</span>
+                                    <span class="contents_detail">
+                                        <span class="tit"><span class="dot">●</span>행사목적</span>
+                                        <span class="txt placeholder">내용을 입력해주세요.</span>
+                                    </span>
+                                    <span class="contents_detail">
+                                        <span class="tit"><span class="dot">●</span>행사대상</span>
+                                        <span class="txt placeholder">내용을 입력해주세요.</span>
+                                    </span>
+                                    <span class="contents_detail">
+                                        <span class="tit"><span class="dot">●</span>행사내용</span>
+                                        <span class="txt placeholder">내용을 입력해주세요.</span>
+                                    </span>
+                                    <span class="contents_detail">
+                                        <span class="tit"><span class="dot">●</span>신청기간</span>
+                                        <span class="txt placeholder">내용을 입력해주세요.</span>
+                                    </span>
+                                    <span class="contents_detail">
+                                        <span class="tit"><span class="dot">●</span>신청방법</span>
+                                        <span class="txt placeholder">내용을 입력해주세요.</span>
+                                    </span>
+                                    <span class="contents_detail">
+                                        <span class="tit"><span class="dot">●</span>문의전화</span>
+                                        <span class="txt placeholder">내용을 입력해주세요.</span>
+                                    </span>
+                                </div>
+                                <a href="/user/uss/ion/biz/BizRequestForm.do?bizFormSn=<c:out value=" ${bizFormVO.bizFormSn}" />&tmplatSn=
+                                <c:out value="${bizFormVO.tmplatSn}" />" class="next_page disabled" id="next_page">다음 단계</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sel_row center calendar">
+                        <c:if test="${bizFormVO.tmplatSn != 0 }">
+                            <a href="/user/uss/ion/biz/BizRequest.do?bizFormSn=<c:out value="
+                                ${bizFormVO.bizFormSn}" />" class="sq_btn three calendar_btn">
+                            신청하기
+                            </a>
+                        </c:if>
+                        <a href="javascript:history.back()" class="sq_btn calendar_btn">
+                            캘린더로 돌아가기
+                        </a>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+        <!-- ========== END MAIN CONTENT ========== -->
+
+        <!-- ========== FOOTER ========== -->
+        <jsp:include page="/WEB-INF/user/footer.jsp"></jsp:include>
+        <!-- ========== END FOOTER ========== -->
+    </div>
+</body>
+
+</html>
