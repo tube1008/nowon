@@ -2685,12 +2685,9 @@ em {color: #FF8A00;}
 .statistics .stats .category_box {
     display: flex; flex-flow: row nowrap;
     justify-content: space-between;
-    border-top: 2px solid #2970DB;
-    border-bottom: 2px solid #2970DB;
-    padding: 20px 0;
 }
 .statistics .stats .category_box .t_stats {
-    width: 24%;
+    width: 24.5%;
     font-size: 1.8rem; color: #2970DB;
     border: 2px solid #2970DB;
     border-radius: 10px;
@@ -2709,25 +2706,31 @@ em {color: #FF8A00;}
 .statistics .stats .job_stats {
     display: flex; flex-flow: column nowrap;
 }
-.statistics .stats .job_stats .stats_box {
-    display: flex; flex-flow: row nowrap;
-    justify-content: space-between;
-}
-.statistics .stats .job_stats .main_stats {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-}
-.statistics .stats .job_stats .job_tit {
+.statistics .stats .job_stats .stats_tit {
     display: flex; justify-content: center;
-}
-.statistics .stats .job_stats .job_tit {
+    align-items: center;
     background: #D1DFF4;
     padding: 11px 0;
     margin: 40px 0 10px 0;
     border-radius: 10px;
 }
+.statistics .stats .job_stats .job_tit {
+    margin: 0 auto;
+    font-size: 1.8rem;
+}
+.statistics .stats .job_stats .expand {
+    padding-right: 20px;
+}
+.statistics .stats .job_stats .expand img  {
+    width: 20px; height: auto;
+}
+
 .statistics .stats .job_stats .stats_img {
-    width: 100%;
+    width: 70%;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
 }
 .calendar .board_contents {
     display: flex; flex-flow: row nowrap;
@@ -2765,6 +2768,94 @@ em {color: #FF8A00;}
 }
 .calendar .board_contents .contents_txt .contents_detail .txt {
     font-size: 1.6rem; padding-left: 10px;
+}
+/* searchpage 검색페이지 */
+.searchpage .search_result {
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between; align-items: center;
+    padding: 70px 0 20px 0;
+}
+.searchpage .search_result .result {
+    font-size: 3.0rem; font-weight: 600;
+}
+.searchpage .search_result .result .count {
+    color: #2970DB;
+    padding: 0 5px;
+}
+.searchpage .menu_box {
+    width: 100%;
+    padding-bottom: 40px;
+    display: flex;
+    gap: 10px;
+}
+.searchpage .menu_box .top, .btm {
+    width: 100%;
+    display: flex; justify-content: space-between;
+    gap: 10px;
+}
+.searchpage .menu_box .t_menu {
+    flex: 1;
+    padding: 13px 0;
+    font-size: 1.6rem;
+    color: #2970DB;
+    border: 2px solid #2970DB;
+    border-radius: 10px;
+    text-align: center;
+}
+.searchpage .menu_box .on {
+    color: #fff; font-weight: 600;
+    background: #2970DB;
+}
+.searchpage .menu_box .t_menu:hover {
+    transition: 0.3s;
+    color: #fff; font-weight: 600;
+    background: #2970DB;
+}
+.searchpage .result_tit {
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+    height: 40px;
+    background: #D1DFF4;
+    border-radius: 10px;
+}
+.searchpage .result_tit .tit {
+    font-size: 1.8rem; font-weight: 500;
+    padding: 7px 20px;
+}
+.searchpage .result_tit .tit .count_page {padding-left: 4px;}
+.searchpage .result_tit .tit .count_result {
+    color: #2970DB;
+    padding: 0 2px;
+}
+.searchpage .result_tit .more_btn {
+    padding: 10px 20px;
+}
+.searchpage .result_tit .more_btn img {
+    width: 20px; height: auto;
+}
+.searchpage .result_page .detail_box {
+    padding-bottom: 80px;
+}
+.searchpage .result_page .detail_page {
+    display: flex; flex-flow: column nowrap;
+    padding: 20px 10px;
+    border-bottom: 1px solid #bbb;
+}
+.searchpage .result_page .detail_page .detail_tit {
+    font-size: 1.6rem; 
+    color: #2970DB;
+}
+.searchpage .result_page .detail_page .detail_prev {
+    font-size: 1.5rem;
+    padding-top: 10px;
+}
+.searchpage .result_page .empty_box {
+    padding: 50px 0;
+    text-align: center;
+    border-bottom: 1px solid #bbb;
+}
+.searchpage .result_page .empty_box .empty {
+    font-size: 1.5rem;
 }
 /* 반응형 */
 @media screen and (max-width: 1499px) {
@@ -3010,7 +3101,22 @@ em {color: #FF8A00;}
     .talent_box .information {background-image: none;}
     .talent_box .information {
         padding: 30px;
-    } 
+    }
+    /* 검색페이지 */
+    .searchpage .search_result {
+        flex-flow: column nowrap;
+        align-items: normal;
+        text-align: center;
+    }
+    .searchpage .search_container .search_result form .condition .item .input_txt {
+        width: calc(100% - 74px);
+    }
+    .searchpage .menu_box {
+        flex-flow: column nowrap;
+    }    
+    .searchpage .menu_box .t_menu {    
+        padding: 10px 0;
+    }
 }
 @media screen and (max-width: 767px) {	
 	.main_srch .srch_recom{
