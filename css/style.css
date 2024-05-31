@@ -3116,9 +3116,13 @@ em {color: #FF8A00;}
     }    
     .searchpage .menu_box .t_menu {    
         padding: 10px 0;
+
     }
 }
-@media screen and (max-width: 767px) {	
+@media screen and (max-width: 767px) {
+    .suggestion .user_ .title_name {
+    	width: 20%;
+    }	
 	.main_srch .srch_recom{
 		gap: 10px;
         text-align: center;
