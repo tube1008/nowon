@@ -3116,7 +3116,7 @@ em {color: #FF8A00;}
     }    
     .searchpage .menu_box .t_menu {    
         padding: 10px 0;
-
+        border: 1px solid #eee;
     }
 }
 @media screen and (max-width: 767px) {
