@@ -874,12 +874,47 @@ table .ico-file{
     margin-top: 8px;
 }
 .board .board_txt{
-    padding: 36px 16px 70px;
+    display: flex; justify-content: center;
+    margin: 40px 0 90px 0;
+}
+.board .board_txt .board_img {
+    width: 50%;
+    position: relative;
+    left: 12%; top: 0;
+}
+.board .board_txt .board_img img {
+    width: 80%; height: auto;
 }
 .board .board_txt *{
     font-family: 'Noto Sans KR', sans-serif !important;
     font: revert-layer;
 }
+.board .board_txt .board_bg {
+    position: relative;
+    left: -140px; top: 50px;
+    padding: 30px 20px 50px 250px;
+    background: rgba(1, 1, 1, 0.03);
+    border-radius: 10px;
+}
+.board .board_txt .board_bg .board_detail {
+    display: flex; flex-flow: column nowrap;
+}
+.board .board_txt .board_bg .board_detail h4 {
+    font-size: 1.8rem; font-weight: 600;
+    color: #2970DB;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.board .board_txt .board_bg .board_detail .tit {
+    font-size: 1.6rem; font-weight: 600;
+    color: #2970DB;
+    padding-top: 20px;
+}
+.board .board_txt .board_bg .board_detail .txt {
+    font-style: 1.6rem;
+    padding: 5px 0;
+}
+
 .data-move-box {
     margin-bottom: 20px;
     border: 1px solid #000;
@@ -3049,7 +3084,59 @@ em {color: #FF8A00;}
     .statistics .stats .job_stats .stats_box {
         flex-flow: column nowrap;
     }
-}
+    .board .board_txt {
+        flex-flow: column nowrap;
+        display: flex; align-items: center;
+    }
+    .board .board_txt .board_img {
+        width: 100%;
+        position: static;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+        .board .board_txt .board_img img {
+            width: 70%;
+            display: inline-block;
+        }
+    .board .board_txt .board_bg {
+        position: static;
+        padding: 30px;
+    }
+    /* 서식만들기 */
+
+    .frm2 .pgph {
+        display: flex; flex-flow: column nowrap;
+        padding: 15px 0;
+    }
+    .frm2 .pgph .cont_tit {
+        font-size: 1.8rem; font-weight: 600;
+        color: #2970DB;
+        text-align: center;
+    }
+    .frm2 .pgph .tit {
+        font-size: 1.6rem; font-weight: 600;
+        color: #2970DB;
+    }
+    .frm2 .pgph .txt {
+        font-size: 1.6rem; padding: 5px 0 0 20px;
+    }
+    
+    .frm3 .pgph {
+        display: flex; flex-flow: column nowrap;
+        padding: 15px 0;
+    }
+    .frm3 .pgph .cont_tit {
+        font-size: 1.8rem; font-weight: 600; text-align: center;
+    }
+    .frm3 .pgph .tit {
+        width: 16%; font-size: 1.6rem; font-weight: 600; background: #D1DFF4;padding: 2px 0; border-radius: 5px; text-align: center;
+    }
+    .frm3 .pgph .txt {
+        font-size: 1.6rem;
+        padding: 5px 0 0 20px;
+    }
+
+    /* 서식만들기 */
 @media screen and (max-width: 821px) {
 	/* 청년정책제언 슬로건 */
     .suggestion .slogan {padding: 30px 40px;}
