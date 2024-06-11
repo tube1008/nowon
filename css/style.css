@@ -2892,6 +2892,118 @@ em {color: #FF8A00;}
 .searchpage .result_page .empty_box .empty {
     font-size: 1.5rem;
 }
+
+/* 로그인페이지 */
+.login {text-align: center;}
+.login .login_tit .tit {
+    font-size: 3.0rem; font-weight: 600;
+}
+.login .login_tit .intro {
+    font-size: 1.8rem; font-weight: 400;
+    padding: 50px 0 30px 0;
+}
+.login .login_idpw {
+    display: flex; flex-flow: column nowrap;
+    align-items: center;
+}
+.login .login_idpw .log {
+    width: 450px; height: 60px;
+    border: 1px solid #888;
+}
+.login .login_idpw .user_id {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 5px 0px 5px 60px;
+    background: url(../images/user_profile.png) no-repeat 3.5%;
+    background-size: 6%;
+    font-size: 1.8rem;
+}
+.login .login_idpw .user_pw {
+    border-width: 0 1px 1px 1px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 5px 0px 5px 60px;
+    background: url(../images/password.png) no-repeat 3.5%;
+    background-size: 6%;
+    font-size: 1.8rem;
+}
+.login .login_idpw .user_id::placeholder,
+.login .login_idpw .user_pw::placeholder {font-size: 1.8rem; color: #888;}
+.login .other_tit {
+    font-size: 1.6rem;
+    padding: 20px 0 5px 0;
+}
+.login .login_other {
+    display: flex; flex-flow: row nowrap;
+    justify-content: center;
+}
+.login .login_other .find_id {
+    position: relative;
+    padding: 0 20px 0 0;
+}
+.login .login_other .find_id::after {
+    content: "";
+    display: block;
+    border-left: 1px solid #888;
+    position: absolute;
+    left: 90px;
+    top: 13%;
+    height: 18px;
+}
+.login .login_other .find_pw {
+    position: relative;
+    padding: 0 20px;
+}
+.login .login_other .find_pw::after {
+    content: "";
+    display: block;
+    border-left: 1px solid #888;
+    position: absolute;
+    left: 127px;
+    top: 13%;
+    height: 18px;
+}
+.login .login_other .join {
+    padding: 0 0 0 20px;
+}
+.login .login_btn {
+    width: 450px; height: auto;
+    font-size: 2.0rem; font-weight: 600;
+    padding: 10px 0;
+    color: #fff;
+    background: #2970DB;
+    border-radius: 5px;
+    margin-top: 50px;
+}
+
+/* 에러페이지 */
+.error_message .error {
+    display: flex; flex-flow: column nowrap;
+    text-align: center;
+    padding: 80px 10px 50px 10px;
+}
+.error_message .error .error_img {padding-bottom: 40px;}
+.error_message .error .error_img img {
+    width: 350px; height: auto;
+}
+.error_message .error .regular {
+    font-size: 2.2rem;
+}
+.error_message .error .light {
+    font-size: 1.7rem; font-weight: 400;
+    padding: 30px 0;
+}
+.error_message .error .back_page { 
+    font-size: 2.0rem; color: #2970DB;
+    padding: 13px 0;
+    border: 2px solid #2970DB;
+    border-radius: 10px;
+    width: 180px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+    
+
 /* 반응형 */
 @media screen and (max-width: 1499px) {
 }
@@ -3135,7 +3247,7 @@ em {color: #FF8A00;}
         font-size: 1.6rem;
         padding: 5px 0 0 20px;
     }
-
+}
     /* 서식만들기 */
 @media screen and (max-width: 821px) {
 	/* 청년정책제언 슬로건 */
