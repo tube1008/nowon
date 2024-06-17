@@ -3002,7 +3002,10 @@ em {color: #FF8A00;}
     margin: 0 auto;
     margin-top: 50px;
 }
-    
+.error .back_page:hover {
+	background: #2970db; color:#fff;
+	transition: 0.3s;
+}
 
 /* 반응형 */
 @media screen and (max-width: 1499px) {
@@ -3199,20 +3202,27 @@ em {color: #FF8A00;}
     .board .board_txt {
         flex-flow: column nowrap;
         display: flex; align-items: center;
+        position: relative;
+       
     }
     .board .board_txt .board_img {
-        width: 100%;
-        position: static;
-        text-align: center;
-        padding-bottom: 20px;
+        width: 500px;
+        height: auto;
+        position: absolute;
+        left: 12%; top: 0;
+        z-index: -90;
     }
-        .board .board_txt .board_img img {
-            width: 70%;
-            display: inline-block;
-        }
+    .board .board_txt .board_img img {
+        width: 70%;
+        display: inline-block;
+    }
     .board .board_txt .board_bg {
-        position: static;
-        padding: 30px;
+    position: absolute;
+    left: -140px;
+    top: 50px;
+    padding: 30px 20px 50px 250px;
+    background: rgba(1, 1, 1, 0.03);
+    border-radius: 10px;
     }
     /* 서식만들기 */
 
