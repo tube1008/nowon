@@ -3200,7 +3200,7 @@ em {color: #FF8A00;}
         flex-flow: column nowrap;
     }
     .board .board_txt {
-        flex-flow: column nowrap;
+        flex-flow: column  nowrap;
         display: flex; align-items: center;
         position: relative;
        
