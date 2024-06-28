@@ -3006,7 +3006,62 @@ em {color: #FF8A00;}
 	background: #2970db; color:#fff;
 	transition: 0.3s;
 }
-
+/* 사이트맵 */
+.siteMap .sm_box .sm_tit {
+    font-size: 4.8rem;
+    font-weight: 600;
+    padding: 50px 0;
+    text-align: center;
+}
+.siteMap .sm_box .sm_all_menu {
+    padding: 100px;
+    border-radius: 20px;
+    border: 1px solid #c4c4c4;
+}
+.siteMap .sm_box .sm_category {
+    display: flex;
+    flex-flow: row nowrap;
+}
+.siteMap .sm_box .sm_category .menu_tit {
+    width: 19.7%;
+    border-top: 2px solid #2970DB;
+    padding: 10px 0;
+}
+.siteMap .sm_box .sm_category .menu_tit span {
+    font-size: 2.0rem; font-weight: 600;
+}
+.siteMap .sm_box .sm_sub_menu {
+    border-top: 2px solid #ddd;
+    width: calc(100% - 19.7%);
+}
+.siteMap .sm_box .sm_sub_menu .sub_menu {
+    display: flex;
+    padding: 14px 0 50px 30px;
+}
+.siteMap .sm_box .sm_sub_menu ul li {
+    width: 24%;
+}
+.siteMap .sm_box .sm_sub_menu .sub_tit {
+    font-size: 1.8rem;
+    display: block;
+    padding:0 20px 5px 0; 
+}
+.siteMap .sm_box .sm_sub_menu .sub_tit:hover {
+    color: #2970DB; font-weight: 600;
+}
+.siteMap .sm_box .sm_sub_menu .sub_m {
+    display: flex;
+    flex-flow: column nowrap;
+}
+.siteMap .sm_box .sm_sub_menu .sub_m li {width: 100%;}
+.siteMap .sm_box .sm_sub_menu .sub_m li a{
+    padding-top: 10px;
+    font-size: 1.6rem;
+    display: block;
+}
+.siteMap .sm_box .sm_sub_menu .sub_m li a:hover {
+    color: #2970DB; font-weight: 600;
+} 
 /* 반응형 */
 @media screen and (max-width: 1499px) {
 }
@@ -3203,7 +3258,6 @@ em {color: #FF8A00;}
         flex-flow: column  nowrap;
         display: flex; align-items: center;
         position: relative;
-       
     }
     .board .board_txt .board_img {
         width: 500px;
@@ -3256,6 +3310,22 @@ em {color: #FF8A00;}
     .frm3 .pgph .txt {
         font-size: 1.6rem;
         padding: 5px 0 0 20px;
+    }
+    /* 사이트맵 */
+    .siteMap .sm_box .sm_category {
+        flex-flow: column nowrap;
+    }
+    .siteMap .sm_box .sm_category .menu_tit  {
+        width: 100%;
+    }
+    .siteMap .sm_box .sm_sub_menu .sub_menu {
+        padding: 14px 0 30px 0;
+    }
+    .siteMap .sm_box .sm_sub_menu {
+        width: 100%;
+    }
+    .siteMap .sm_box .sm_all_menu {
+        padding: 50px 30px;
     }
 }
     /* 서식만들기 */
@@ -3546,6 +3616,9 @@ em {color: #FF8A00;}
 		width: 16px;
 		height: 16px;
 	}
+    .siteMap .sm_box .sm_sub_menu .sub_tit {
+        padding-bottom: 5px;
+    }
 }
 @media all and (max-width:399px) {
 	.board .board_title h3{

@@ -1,268 +1,116 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
 
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-        <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-            <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-                <!DOCTYPE html>
-                <html lang="ko">
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-                <head>
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>Document</title>
-                </head>
-                <body>
-                    <footer id="footer">
-                        <div class="container">
-                            <div id="glanceLink">
-                                <div class="related-site">
-                                    <h3 class="sr-only hide">관련사이트</h3>
-                                    <div class="site-group">
-                                        <h4 class="site-group-title">
-                                            <a href="#none">동주민센터</a>
-                                        </h4>
-                                        <ul class="site-list">
-                                            <li><a href="https://www.nowon.kr/dong/index.do?q_deptCode=1047"
-                                                    target="_blank" title="동주민센터 월계1동 바로가기">월계1동</a></li>
-                                            <li><a href="https://www.nowon.kr/dong/index.do?q_deptCode=1048"
-                                                    target="_blank" title="동주민센터 월계2동 바로가기">월계2동</a></li>
-                                            <li><a href="https://www.nowon.kr/dong/index.do?q_deptCode=1049"
-                                                    target="_blank" title="월계3동 동주민센터 바로가기">월계3동</a></li>
-                                            <li><a href="https://www.nowon.kr/dong/index.do?q_deptCode=1051"
-                                                    target="_blank" title="동주민센터 공릉1동 바로가기">공릉1동</a></li>
-                                            <li><a href="https://www.nowon.kr/dong/index.do?q_deptCode=1052"
-                                                    target="_blank" title="동주민센터 공릉2동 바로가기">공릉2동</a></li>
-                                            <li><a href="https://www.nowon.kr/dong/index.do?q_deptCode=1053"
-                                                    target="_blank" title="동주민센터 하계1동 바로가기">하계1동</a></li>
-                                            <li><a href="https://www.nowon.kr/dong/index.do?q_deptCode=1054"
-                                                    target="_blank" title="동주민센터 하계2동 바로가기">하계2동</a></li>
-                                            <li><a href="https://www.nowon.kr/dong/index.do?q_deptCode=1055"
-                                                    target="_blank" title="동주민센터 중계본동 바로가기">중계본동</a></li>
-                                            <li><a href="https://www.nowon.kr/dong/index.do?q_deptCode=1056"
-                                                    target="_blank" title="동주민센터 중계1동 바로가기">중계1동</a></li>
-                                            <li><a href="https://www.nowon.kr/dong/index.do?q_deptCode=1057"
-                                                    target="_blank" title="동주민센터 중계2.3동 바로가기">중계2.3동</a></li>
-                                            <li><a href="https://www.nowon.kr/dong/index.do?q_deptCode=1059"
-                                                    target="_blank" title="동주민센터 중계4동 바로가기">중계4동</a></li>
-                                            <li><a href="https://www.nowon.kr/dong/index.do?q_deptCode=1060"
-                                                    target="_blank" title="동주민센터 상계1동 바로가기">상계1동</a></li>
-                                            <li><a href="https://www.nowon.kr/dong/index.do?q_deptCode=1061"
-                                                    target="_blank" title="동주민센터 상계2동 바로가기">상계2동</a></li>
-                                            <li><a href="https://www.nowon.kr/dong/index.do?q_deptCode=1062"
-                                                    target="_blank" title="동주민센터 상계3.4동 바로가기">상계3.4동</a></li>
-                                            <li><a href="https://www.nowon.kr/dong/index.do?q_deptCode=1063"
-                                                    target="_blank" title="동주민센터 상계5동 바로가기">상계5동</a></li>
-                                            <li><a href="https://www.nowon.kr/dong/index.do?q_deptCode=1064"
-                                                    target="_blank" title="동주민센터 상계6.7동 바로가기">상계6.7동</a></li>
-                                            <li><a href="https://www.nowon.kr/dong/index.do?q_deptCode=1065"
-                                                    target="_blank" title="동주민센터 상계8동 바로가기">상계8동</a></li>
-                                            <li><a href="https://www.nowon.kr/dong/index.do?q_deptCode=1066"
-                                                    target="_blank" title="동주민센터 상계9동 바로가기">상계9동</a></li>
-                                            <li><a href="https://www.nowon.kr/dong/index.do?q_deptCode=1067"
-                                                    target="_blank" title="동주민센터 상계10동 바로가기">상계10동</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="site-group">
-                                        <h4 class="site-group-title">
-                                            <a href="#none">유관기관</a>
-                                        </h4>
-                                        <ul class="site-list">
-                                            <li><a href="https://www.smpa.go.kr/home/homeIndex.do?menuCode=nw"
-                                                    target="_blank" title="서울노원경찰서 바로가기">서울노원경찰서</a></li>
-                                            <li><a href="https://fire.seoul.go.kr/nowon" target="_blank"
-                                                    title="노원 노원소방서 바로가기">노원소방서</a></li>
-                                            <li><a href="https://s.nts.go.kr/nw/Default.asp" target="_blank"
-                                                    title="노원 노원세무서 바로가기">노원세무서</a></li>
-                                            <li><a href="http://land.nowon.kr/" target="_blank"
-                                                    title="부동산·건축 종합포털 바로가기">부동산정보광장</a></li>
-                                            <li><a href="http://www.nowonmind.or.kr	" target="_blank"
-                                                    title="노원구정신건강증진센터 바로가기">노원구정신건강복지센터</a></li>
-                                            <li><a href="https://www.nowonlib.kr/" target="_blank"
-                                                    title="노원구립도서관 바로가기">노원구립도서관</a></li>
-                                            <li><a href="https://www.sangsangirum.net/" target="_blank"
-                                                    title="상상이룸센터 바로가기">상상이룸센터</a></li>
-                                            <li><a href="http://www.humanlib.kr/" target="_blank"
-                                                    title="노원휴먼라이브러리 바로가기">노원휴먼라이브러리</a></li>
-                                            <li><a href="http://www.nwgreen.or.kr" target="_blank"
-                                                    title="(재)노원환경재단 바로가기">(재)노원환경재단</a></li>
-                                            <li><a href="https://dietary4u.mfds.go.kr/nowon" target="_blank"
-                                                    title="노원 어린이급식관리지원센터 바로가기">노원 어린이급식관리지원센터 </a></li>
-                                            <li><a href="http://womanedu.nowon.kr/" target="_blank"
-                                                    title="노원여성교육센터">노원여성교육센터</a></li>
-                                            <li><a href="http://www.nowonhouse.kr/" target="_blank"
-                                                    title="댕댕하우스">노원댕댕하우스</a></li>
-                                            <li><a href="https://www.nowonjobplus.or.kr/" target="_blank"
-                                                    title="노원구 장애인 일자리지원센터">노원구 장애인 일자리지원센터</a></li>
-                                            <li><a href="https://www.nowonsc.kr/fmcs/1" target="_blank"
-                                                    title="">노원구시설관리공단</a></li>
-                                            <li><a href="https://www.nowonarts.kr/" target="_blank" title="">노원문화재단</a>
-                                            </li>
-                                            <li><a href="https://www.50plus.or.kr/nwc/index.do" target="_blank"
-                                                    title="">노원50플러스센터</a></li>
-                                            <li><a href="https://nowon.familynet.or.kr/center/" target="_blank"
-                                                    title="노원구가족센터 바로가기">노원구가족센터</a></li>
-                                            <li><a href="http://www.wwc.or.kr/" target="_blank" title="">월계종합사회복지관</a>
-                                            </li>
-                                            <li><a href="https://www.nowonsenior.or.kr/" target="_blank"
-                                                    title="">시립노원노인종합복지관</a></li>
-                                            <li><a href="http://www.bookboo.or.kr/" target="_blank"
-                                                    title="">북부종합사회복지관</a></li>
-                                            <li><a href="http://www.pyunghwa.or.kr/" target="_blank"
-                                                    title="">평화종합사회복지관</a></li>
-                                            <li><a href="http://www.junggye.or.kr/" target="_blank"
-                                                    title="중계종합사회복지관">중계종합사회복지관</a></li>
-                                            <li><a href="http://www.sanggyebokji.or.kr/" target="_blank"
-                                                    title="상계종합사회복지관 바로가기">상계종합사회복지관</a></li>
-                                            <li><a href="http://www.sungminwelfare.or.kr/" target="_blank"
-                                                    title="성민복지관 바로가기">성민복지관</a></li>
-                                            <li><a href="http://www.nowonjob.or.kr/" target="_blank"
-                                                    title="">노원어르신일자리지원센터</a></li>
-                                            <li><a href="http://www.gongreung.or.kr/" target="_blank"
-                                                    title="공릉종합사회복지관">공릉종합사회복지관</a></li>
-                                            <li><a href="http://wgcwc.or.kr/main.do" target="_blank"
-                                                    title="월계문화복지센터">월계문화복지센터</a></li>
-                                            <li><a href="https://nowon.or.kr/" target="_blank"
-                                                    title="노원1종합사회복지관">노원1종합사회복지관</a></li>
-                                            <li><a href="http://www.madeul.org/" target="_blank"
-                                                    title="마들종합사회복지관">마들종합사회복지관</a></li>
-                                            <li><a href="http://www.sgwc.or.kr/index.asp" target="_blank"
-                                                    title="시립중계노인전문요양원">시립중계노인전문요양원</a></li>
-                                            <li><a href="http://www.shimteo.org/" target="_blank"
-                                                    title="쉼터(중증장애인거주시설)">쉼터(중증장애인거주시설)</a></li>
-                                            <li><a href="https://www.nowonmedia.or.kr" target="_blank"
-                                                    title="노원마을미디어지원센터">노원마을미디어지원센터</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="site-group">
-                                        <h4 class="site-group-title">
-                                            <a href="#none">서울시 자치구</a>
-                                        </h4>
-                                        <ul class="site-list">
-                                            <li><a href="https://www.seoul.go.kr/main/index.jsp" target="_blank"
-                                                    title="">서울시</a></li>
-                                            <li><a href="https://www.gangnam.go.kr/index.htm" target="_blank"
-                                                    title="강남구 바로가기">강남구</a></li>
-                                            <li><a href="https://www.gangdong.go.kr/" target="_blank" title="">강동구</a>
-                                            </li>
-                                            <li><a href="https://www.gangbuk.go.kr" target="_blank"
-                                                    title="강북구 바로가기">강북구</a></li>
-                                            <li><a href="https://www.gangseo.seoul.kr" target="_blank"
-                                                    title="강서구 바로가기">강서구</a></li>
-                                            <li><a href="https://www.gwanak.go.kr" target="_blank"
-                                                    title="관악구 바로가기">관악구</a></li>
-                                            <li><a href="https://www.gwangjin.go.kr" target="_blank"
-                                                    title="광진구 바로가기">광진구</a></li>
-                                            <li><a href="https://www.guro.go.kr" target="_blank"
-                                                    title="구로구 바로가기">구로구</a></li>
-                                            <li><a href="https://www.geumcheon.go.kr" target="_blank"
-                                                    title="금천구 바로가기">금천구</a></li>
-                                            <li><a href="https://www.dobong.go.kr" target="_blank"
-                                                    title="도봉구 바로가기">도봉구</a></li>
-                                            <li><a href="https://www.ddm.go.kr" target="_blank"
-                                                    title="동대문구 바로가기">동대문구</a></li>
-                                            <li><a href="https://www.dongjak.go.kr" target="_blank"
-                                                    title="동작구 바로가기">동작구</a></li>
-                                            <li><a href="https://www.mapo.go.kr" target="_blank"
-                                                    title="마포구 바로가기">마포구</a></li>
-                                            <li><a href="https://www.sdm.go.kr" target="_blank"
-                                                    title="서대문구 바로가기">서대문구</a></li>
-                                            <li><a href="https://www.seocho.go.kr" target="_blank"
-                                                    title="서초구 바로가기">서초구</a></li>
-                                            <li><a href="https://www.sd.go.kr" target="_blank" title="성동구 바로가기">성동구</a>
-                                            </li>
-                                            <li><a href="https://www.sb.go.kr" target="_blank" title="성북구 바로가기">성북구</a>
-                                            </li>
-                                            <li><a href="https://www.songpa.go.kr" target="_blank"
-                                                    title="송파구 바로가기">송파구</a></li>
-                                            <li><a href="https://www.yangcheon.go.kr" target="_blank"
-                                                    title="양천구 바로가기">양천구</a></li>
-                                            <li><a href="https://www.ydp.go.kr" target="_blank"
-                                                    title="영등포구 바로가기">영등포구</a></li>
-                                            <li><a href="https://www.yongsan.go.kr" target="_blank"
-                                                    title="용산구 바로가기">용산구</a></li>
-                                            <li><a href="https://www.ep.go.kr" target="_blank" title="은평구 바로가기">은평구</a>
-                                            </li>
-                                            <li><a href="https://www.jongno.go.kr" target="_blank"
-                                                    title="종로구 바로가기">종로구</a></li>
-                                            <li><a href="https://www.junggu.seoul.kr" target="_blank"
-                                                    title="중구 바로가기">중구</a></li>
-                                            <li><a href="https://www.jungnang.go.kr" target="_blank"
-                                                    title="중랑구 바로가기">중랑구</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#" class="logo-bottom"><img src="/user/images/ico/logo-gray.png" alt="문화도시 노원"></a>
-                            <div class="footer-menu">
-                                <ul class="policy-list">
-                                    <li><a href="/www/guidance/guidance1/guidance1_03.jsp"
-                                            title="이메일무단수집거부 페이지로 이동하기 ">이메일무단수집거부</a></li>
-                                    <li style="font-weight: 700;"><a
-                                            href="/www/guidance/guidance1/guidance1_02/guidance1_02_01.jsp"
-                                            title="개인정보처리방침 페이지로 이동하기 ">개인정보처리방침</a></li>
-                                    <li><a href="/www/intrcn/intrcn4/intrcn4_04.jsp"
-                                            title="찾아오시는길 페이지로 이동하기 ">찾아오시는길</a></li>
-                                    <li><a href="#" title="이메일무단수집거부 페이지로 이동하기 ">RSS</a></li>
-                                    <li><a href="http://help.nowon.kr" title="원격지원 페이지로 이동하기 ">원격지원</a></li>
-                                    <li>
-                                        <a href="#" title="사이트맵 페이지로 이동하기">사이트맵</a>
-                                        <!-- 사이트맵 팝업창 -->
-                                        <div class="sm_box">
-                                            <div class="sm_tit">
-                                                <p class="sm_logo"><img src="./images/sm_logo.png" alt="사이트맵 로고"></p>
-                                                <a href="#" class="sm_close">전체메뉴 닫기<img src="./images/sm_close.png" alt="전체메뉴 닫기"></a>
-                                            </div>
-                                            <div class="sm_menu">
-                                                <ul>
-                                                    <li>
-                                                        
-                                                    </li>
-                                                    <li></li>
-                                                    <li></li>
-                                                    <li></li>
-                                                </ul>
-                                            </div>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="/user/js/main.js"></script>
+
+        <title>사이트 맵 | 노원청년포탈</title>
+</head>
+
+<body>
+        <div id="skip_nav">
+                <a href="#main"><span>본문 바로가기</span></a>
+                <a href="#header"><span>주메뉴 바로가기</span></a>
+                <a href="#footer"><span>푸터 바로가기</span></a>
+        </div>
+        <div id="wrap">
+                <!-- ========== HEADER ========== -->
+                <jsp:include page="/user/mnu/headerMenu.do"></jsp:include>
+                <!-- ========== END HEADER ========== -->
+
+                <!-- ========== MAIN CONTENT ========== -->
+                <main id="main">
+                        <section class="board siteMap" id="content-area">
+                                <div class="sm_box">
+                                        <div class="sm_tit">
+                                                <p class="sm_title">사이트 맵</p>
                                         </div>
-                                    </li>
-                                </ul>
-                                <ul class="sns-links">
-                                    <li><a href="https://www.facebook.com/goodnowon" target="_blank"
-                                            title="노원구청 페이스북 새창으로 이동하기"> <img
-                                                src="/user/images/ico/ico-sns-gray-facebook.png" alt="페이스북">
-                                        </a></li>
-                                    <li><a href="https://post.naver.com/my.nhn?memberNo=6924531" target="_blank"
-                                            title="노원구청 포스트 새창으로 이동하기"> <img
-                                                src="/user/images/ico/ico-sns-gray-post.png" alt="포스트">
-                                        </a></li>
-                                    <li><a href="https://www.instagram.com/goodnowon/" target="_blank"
-                                            title="노원구청 인스타그램 새창으로 이동하기"> <img
-                                                src="/user/images/ico/ico-sns-gray-instargram.png" alt="인스타그램">
-                                        </a></li>
-                                    <li><a href="https://blog.naver.com/goodnowon" target="_blank"
-                                            title="노원구청 네이버 블로그 새창으로 이동하기"> <img
-                                                src="/user/images/ico/ico-sns-gray-blog.png" alt="네이버 블로그">
-                                        </a></li>
-                                    <li><a href="https://twitter.com/goodnowon" target="_blank"
-                                            title="노원구청 트위터 새창으로 이동하기"> <img
-                                                src="/user/images/ico/ico-sns-gray-twitter.png" alt="트위터">
-                                        </a></li>
-                                </ul>
-                                <!-- <a href="http://www.webwatch.or.kr/Situation/WA_Situation.html?MenuCD=110" target="_blank" title="웹 접근성 품질인증 마크 새창으로 이동하기" class="wah-mark">
-                                						<img src="/www/images/common/img-wah-mark.png" alt="과학기술정보통신부 WEB ACCESSIBILITY 마크(웹 접근성 품질인증 마크)">
-                                					</a> -->
-                            </div>
-                            <address class="address">
-                                <p>
-                                    [01689] 서울시 노원구 노해로 437(상계동) <span class="address-item">TEL
-                                        02-2116-3114</span><br class="d-down-md"> (120 다산콜센터로 연결)
-                                    02-2116-3000,3301 (야간,공휴일/당직실) <span class="address-item">FAX
-                                        02-2116-4666</span>
-                                </p>
-                                <p class="copyright">COPYRIGHT ⓒ NOWON-GU OFFICE ALL RIGHT
-                                    RESERVED</p>
-                            </address>
-                        </div>
-                    </footer>
-                </body>
+                                        <div class="sm_all_menu">
+                                                <div class="sm_category">
+                                                        <p class="menu_tit">
+                                                                <span>신통방통! 청년 도우미</span>
+                                                        </p>
+                                                        <div class="sm_sub_menu">
+                                                                <ul class="sub_menu">
+                                                                        <li><a href="#" class="sub_tit">소개글</a></li>
+                                                                        <li>
+                                                                                <a href="#" class="sub_tit">정책캘린더</a>
+                                                                                <ul class="sub_m">
+                                                                                        <li><a href="#">· 취업</a></li>
+                                                                                        <li><a href="#">· 창업</a></li>
+                                                                                        <li><a href="#">· 교육</a></li>
+                                                                                        <li><a href="#">· 주거</a></li>
+                                                                                        <li><a href="#">· 금융</a></li>
+                                                                                        <li><a href="#">· 생활</a></li>
+                                                                                        <li><a href="#">· 문화예술</a></li>
+                                                                                        <li><a href="#">· 마음건강</a></li>
+                                                                                </ul>
+                                                                        </li>
+                                                                        <li><a href="#" class="sub_tit">연간일정</a></li>
+                                                                </ul>
+                                                        </div>
+                                                </div>
+                                                <div class="sm_category">
+                                                        <p class="menu_tit">
+                                                                <span>알려드립니다</span>
+                                                        </p>
+                                                        <div class="sm_sub_menu">
+                                                                <ul class="sub_menu">
+                                                                        <li><a href="#" class="sub_tit">공지사항</a></li>
+                                                                        <li><a href="#" class="sub_tit">이벤트</a></li>
+                                                                        <li><a href="#" class="sub_tit">보도자료</a></li>
+                                                                </ul>
+                                                        </div>
+                                                </div>
+                                                <div class="sm_category">
+                                                        <p class="menu_tit">
+                                                                <span>와글와글! 청년목소리</span>
+                                                        </p>
+                                                        <div class="sm_sub_menu">
+                                                                <ul class="sub_menu">
+                                                                        <li><a href="#" class="sub_tit">청년제언</a></li>
+                                                                        <li><a href="#" class="sub_tit">청년참여공간</a></li>
+                                                                        <li><a href="#" class="sub_tit">청년토론</a></li>
+                                                                        <li><a href="#" class="sub_tit">청년인재 등록</a></li>
+                                                                </ul>
+                                                        </div>
+                                                </div>
+                                                <div class="sm_category">
+                                                        <p class="menu_tit">
+                                                                <span>슬기로운 청년생활</span>
+                                                        </p>
+                                                        <div class="sm_sub_menu">
+                                                                <ul class="sub_menu">
+                                                                        <li>
+                                                                                <a href="#" class="sub_tit">청년통계</a>
+                                                                                <ul class="sub_m">
+                                                                                        <li><a href="#">· 일자리</a></li>
+                                                                                        <li><a href="#">· 문화여가</a></li>
+                                                                                        <li><a href="#">· 주거</a></li>
+                                                                                        <li><a href="#">· 자산부채</a></li>
+                                                                                </ul>
+                                                                        </li>
+                                                                </ul>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </section>
+                </main>
+                <!-- ========== END MAIN CONTENT ========== -->
 
-                </html>
+                <!-- ========== FOOTER ========== -->
+
+                <!-- ========== END FOOTER ========== -->
+        </div>
+</body>
+
+</html>
