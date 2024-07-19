@@ -1,0 +1,226 @@
+<script>
+    var setRowCount = '<?=$param['setRowCount']?>';
+    var statusR = '<?=$param['statusR']?>';
+    var confirmR = '<?=$param['confirmR']?>';
+    var locations = '<?=$param['location']?>';
+    var cond = '<?=$param['cond']?>';
+    var keyword = '<?=$param['keyword']?>';
+    var query_var = '';
+
+    function goSearch() {
+        frmSearch.submit();
+    }
+
+    function searchLocation(v) {
+        frmSearch.location.value = v;
+        goSearch();
+    }
+
+    function goExcel() {
+        //frmSearch.action = "excel.php";
+        //frmSearch.submit();
+
+        frmSearch.smode.value = 'ajax';
+        frmSearch.fn.value = 'evaluation_excel';
+        frmSearch.submit();
+
+    }
+
+    function del(idx) {
+        if (confirm("정말로 삭제하시겠습니까?")) {
+            frmSearch.idx.value = idx;
+            frmSearch.smode.value = 'ajax';
+            frmSearch.fn.value = 'evaluation_del';
+            frmSearch.submit();
+        }
+    }
+
+    function tech_area_onchange() {
+        if (frmSearch.tech_area.value == "기술") {
+            frmSearch.tech.disabled = false;
+        } else {
+            frmSearch.tech.disabled = true;
+            frmSearch.tech.value = "";
+        }
+    }
+
+    function showAssessmentScore(no) {
+        window.open("../evaluation/assessment_member_score.php?idx=" + no, "showAssessmentScore", 'width=800, height=940, scrollbars=yes');
+    }
+
+    function showCheckboxes() {
+        let checkboxes = document.getElementById("checkBoxes");
+        if (show) {
+            checkboxes.style.display = "block";
+            show = false;
+        } else {
+            checkboxes.style.display = "none";
+            show = true;
+        }
+    }
+
+    function selectType() {
+        const getAllCheckBoxes = document.querySelectorAll('#checkBoxes input[type=checkbox]');
+        const statusInput = document.getElementById("statusR");
+
+        statusInput.value = Array.from(getAllCheckBoxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => checkbox.value)
+            .join(',');
+    }
+
+</script>
+<style>
+    .multipleSelection {
+        width: 100%;
+        background-color: #ffffff;
+    }
+
+    .selectBox {
+        position: relative;
+    }
+
+    .selectBox select {
+        width: 100%;
+    }
+
+    .overSelect {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    #checkBoxes {
+        display: none;
+        border: 1px #8DF5E4 solid;
+    }
+
+    #checkBoxes label {
+        display: block;
+    }
+
+    #checkBoxes label:hover {
+        background-color: #5598d5;
+        color: white;
+        /* Added text color for better visibility */
+    }
+</style>
+<input type="hidden" name="pmode" value="<?= $param['pmode'] ?>">
+<div class="col-md-12">
+    <!-- BEGIN Portlet PORTLET-->
+    <div class="portlet light">
+        <div class="portlet-body">
+            <div class="area bg-grey-steel p20 mb10" name="searchBox">
+                <form name="frmSearch" action="?pmode=<?= $param['pmode'] ?>" method="get" style="margin:0">
+
+                    <input type="hidden" name="pmode" value="<?= $param['pmode'] ?>">
+                    <input type="hidden" name="location" value="<?= $param['location'] ?>">
+                    <input type="hidden" name="smode" id="smode" value="">
+                    <input type="hidden" name="fn" id="fn" value="">
+                    <input type="hidden" name="s" value="<?= $param['s'] ?>">
+                    <input type="hidden" name="idx" value="">
+
+                    <?php
+                    if ($_SESSION["session_admin_location"] == "" || $_SESSION['userLoginSeq'] == '1' || $_SESSION['userLoginSeq'] == '2') {
+                        ?>
+                    <a href="javascript:searchLocation('');" class="btn btn-sm blue-dark">전체</a>
+                    <?php
+                        foreach ($AreaArr as $val) {
+                            $sel = in_array($val, $param['location']) ? 'checked' : '';
+                            echo '
+                    <a href="javascript:searchLocation(\'' . $val . '\')" class="btn btn-sm blue-dark"> ' . $val . '</a> ';
+                        }
+                        ?>
+                    <br><br>
+                    <? } ?>
+
+                    <?php
+                    $cond = $parma['cond'];
+                    ?>
+                    <script>
+                        let show = true;
+
+                        function showCheckboxes() {
+                            let checkboxes = document.getElementById("checkBoxes");
+
+                            if (show) {
+                                checkboxes.style.display = "block";
+                                show = false;
+                            } else {
+                                checkboxes.style.display = "none";
+                                show = true;
+                            }
+                        }
+                    </script>
+                    <div class="container">
+                        <select name="setRowCount" id="setRowCount">
+                            <option value="15">목록개수</option>
+                            <?php
+                                                foreach ($page_size_arr as $skey => $sval) {
+                                                    $sel = $param['setRowCount'] == $sval ? 'selected' : '';
+                                                    echo '<option value="' . $sval . '" ' . $sel . '>' . $sval . '개</option>';
+                                                }
+                                                ?>
+                        </select>
+
+                        <div class="multipleSelection">
+                            <div class="selectBox" onclick="showCheckboxes()">
+                                <select>
+                                    <option value="">현장평가 신청현황 전체</option>
+                                </select>
+                                <div class="overSelect"></div>
+                            </div>
+                            <div id="checkBoxes">
+                                <?php
+                                                    foreach ($statusRArr as $skey => $sval) {
+                                                        $sel = in_array($skey, explode(',', $param['statusR'])) ? 'checked' : '';
+                                                        echo '<label for="first">
+                                                          <input type="checkbox" value="' . $skey . '" ' . $sel . ' onchange="selectType()"/>
+                                                          ' . $sval . '
+                                                      </label>';
+                                                    }
+                                                    ?>
+                            </div>
+                        </div>
+                        <input type="hidden" name="statusR" id="statusR" value="">
+                        
+                        <select name="confirmR">
+                            <option value="">확인서 유무 전체</option>
+                            <option value="Y" <?=$param['confirmR']=='Y' ? 'selected' : '' ; ?>>확인서 유</option>
+                            <option value="N" <?=$param['confirmR']=='N' ? 'selected' : '' ; ?>>확인서 무</option>
+                        </select>
+
+                        <select name="cond">
+                            <option value="company_name" <? if ($param['cond']=="company_name" ) echo " selected" ; ?>
+                                >업체명
+                            </option>
+                            <option value="company_id" <? if ($param['cond']=="company_id" ) echo " selected" ; ?>
+                                >사업자등록번호
+                            </option>
+                            <!--
+                                            <option value="id"<? if ($cond == "id") echo " selected"; ?>>아이디</option>
+                                            -->
+                            <option value="company_tel" <? if ($param['cond']=="company_tel" ) echo " selected" ; ?>
+                                >전화번호
+                            </option>
+                            <option value="ceo_name" <? if ($param['cond']=="ceo_name" ) echo " selected" ; ?>>대표자성명
+                            </option>
+                            <!-- 전화번호는  업체전화번호 -->
+                        </select>
+
+
+                        <input name="keyword" type="text" class="form-control input-inline input-small input-sm"
+                            style="width:50px;" value="<?= $param['keyword'] ?>">
+
+                        <a href="javascript:goSearch();" class="btn btn-sm blue-dark">검색</a>
+                        <a href="javascript:goExcel();" class="btn btn-sm blue-dark">엑셀저장</a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- END Portlet PORTLET-->
+</div>
